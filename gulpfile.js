@@ -15,7 +15,7 @@ const uglify       = require('gulp-uglify-es').default;
 const concat       = require('gulp-concat');
 const webpack      = require('webpack-stream');
 
-function ghPages() {
+function ghPages(cb) {
   ghpages.publish(path.join(process.cwd(), './build'), cb);
 }
 
@@ -37,7 +37,6 @@ function buildPages () {
     .pipe(typograf({
       locale: ['ru', 'en-US']
     }))
-    // .pipe(concat('index.html'))
     .pipe(dest('build/'));
 }
 

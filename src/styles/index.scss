@@ -1,5 +1,5 @@
-@import 'common/main.scss', 'common/fonts.scss', 'common/mixins.scss', 'common/vars.scss',
-'common/header.scss', 'common/footer.scss', 'common/catalog-nav.scss';
+@import 'common/fonts.scss', 'common/mixins.scss', 'common/vars.scss',
+'common/main.scss', 'common/header.scss', 'common/footer.scss', 'common/catalog-nav.scss';
 
 $first-color: #FFA88C;
 $second-color:#FFE9FD;
@@ -92,12 +92,9 @@ main {
 
     &__img {
       &.lookbook {
-        max-width: 120%;
-        min-height: 50%;
         position: relative;
-        object-fit: cover;
         top: 8px;
-        left: -55px;
+        left: -45px;
         transform: rotate(-7.82deg);
         @include w-from($screen-lg) {
           z-index: 1;
@@ -133,11 +130,9 @@ main {
     &-1 {
       height: 320px;
       background-color: $first-color;
-      overflow: hidden;
       @extend %border-box;
       @include w-from($screen-lg) { 
         grid-area: one; 
-        overflow: visible;
       }
     }
     &-2 {

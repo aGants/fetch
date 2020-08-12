@@ -1,18 +1,19 @@
+mixin link(href, name)
+  a(class="menu-block__link" href=href)=name
+
 footer
   .container
     .menu
       .menu-block
-        a(href="").menu-block__mainlink.fetch Фетч 
-        a
-          +link('', 'Магазин')
-          +link('', 'Блок')
-          +link('', 'Доставка и оплата')
+        a(href="index.html").menu-block__mainlink.fetch Фетч 
+        +link('', 'Магазин')
+        +link('', 'Блок')
+        +link('', 'Доставка и оплата')
         .menu-block__contact
           a(href="mailto:shop@fetch.ru" itemprop='email').menu-block__link.contact-email shop@fetch.ru
           span.menu-block__contact-item.contact-phone 8 800 912-11-42 
           span.menu-block__contact-item.contact-text Звонок бесплатный
       include catalog-nav
-
     .footer-info 
       span.footer-info__text © Фетч-команда, 2019
       a.footer-info__popup(href='#rules') Правила обработки персональных данных
