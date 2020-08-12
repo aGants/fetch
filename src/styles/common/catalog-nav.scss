@@ -1,0 +1,26 @@
+@import 'mixins.scss', 'vars.scss';
+
+
+.menu {
+  display: flex;
+  @include w-from($screen-lg) {
+    flex-direction: row;
+  }
+
+  &-block {
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+
+    &__link {
+      margin-bottom: 8px;
+      margin-left: 9px;
+      font-size: $text-size;
+    }
+    &__mainlink {
+      margin-bottom: 12px;
+      font-weight: bold;
+      font-size: $link-main-font-size;
+    }
+  }
+}

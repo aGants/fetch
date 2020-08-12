@@ -1,0 +1,43 @@
+mixin link(href, name)
+  a(class="menu-block__link" href=href)=name
+
+mixin main-link(href, name)
+  a(class="menu-block__mainlink" href=href)=name  
+
+.menu-block
+  a
+    +main-link('','Для мужчин')
+    +link('', 'Верхняя одежда')
+    +link('', 'Рубашки и поло')
+    +link('', 'Трикотаж')
+    +link('', 'Брюки и джинсы')
+    +link('', 'Бельё и носки')
+
+.menu-block
+  a
+    +main-link('','Для женщин')
+    +link('', 'Верхняя одежда')
+    +link('', 'Рубашки и поло')
+    +link('', 'Трикотаж')
+    +link('', 'Брюки и джинсы')
+    +link('', 'Бельё и носки')
+
+.menu-block
+  a
+    +main-link('','Обувь')
+    +link('', 'Кроссовки и кеды')
+    +link('', 'Ботинки')
+
+.menu-block
+  a
+    +main-link('', 'Аксессуары')
+    +link('', 'Сумки и рюкзаки')
+    +link('', 'Часы')
+    +link('', 'Бижутерия')
+    +link('', 'Средства для ухода')
+
+.menu-block
+  a
+    +main-link('','Скидки')
+    +link('', 'Летняя распродажа')
+    +link('', 'Коллекция 2018')

@@ -1,0 +1,110 @@
+@import 'mixins.scss', 'vars.scss', 'fonts.scss';
+
+header {
+  max-height: 48px;
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: 1fr 6fr 1fr;
+  grid-template-rows: 48px;
+  max-width: 100vw;
+  font-size: $text-size;
+  white-space: nowrap;
+
+  ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  &__main {
+    grid-column: 1/2;
+    margin-top: 8px;
+    margin-left: 16px;
+    font-size: $nav-main-font-size;
+    font-weight: bold;
+    text-decoration: none;
+    @include w-from($screen-lg) {
+      margin: 8px 0 9px;
+    }
+  }
+
+  &-links {
+    grid-column: 2/3;
+    display: flex;
+    justify-content: space-between;
+    height: 70%;
+    margin-top: 15px;
+    margin-left: 20px;
+    padding-left: 12px;
+    overflow-x: scroll;
+
+    @include w-to($screen-lg) {
+      mask-image: linear-gradient(
+        90deg,
+        transparent 0, rgba(0, 0, 0, .25) 0px,
+        #000 23px,
+        #000 calc(100% - 23px),
+        rgba(0, 0, 0, .25) calc(100% - 9px),
+        transparent);
+      }
+      
+      @include w-from($screen-lg) {
+        width: 520px;
+        margin-left: 42px;
+    }
+
+    &__link {
+      margin-right: 20px;
+      text-decoration: none;
+      border-bottom: 1px solid;
+      vertical-align: baseline;
+      line-height: 1;
+    }
+  }
+
+  &-checkout {
+    grid-column: 3/4;
+    margin-top: 16px;
+    margin-right: 8px;
+    text-align: right;
+    
+  &__icon {
+    height: $text-size;
+  }
+  }
+
+}  
+
+.dark {
+  background-color: $dark-bg;
+  .nav-links__link, .nav__main, 
+  .nav-checkout__link {
+    @extend %dark-link;
+  }
+  
+  svg {
+    fill: $dark-text;
+  }
+
+  a:hover svg {
+    fill: $dark-link;
+  }
+  }
+
+.white {
+  background-color: $white-bg;
+  .nav-links__link, .nav__main, 
+  .nav-checkout__link {
+    @extend %white-link;
+  }
+  svg {
+    fill: $white-text;
+  }
+
+  a:hover svg {
+    fill: $white-link;
+  }
+}

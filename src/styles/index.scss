@@ -1,0 +1,175 @@
+@import 'common/main.scss', 'common/fonts.scss', 'common/mixins.scss', 'common/vars.scss',
+'common/header.scss', 'common/footer.scss', 'common/catalog-nav.scss';
+
+$first-color: #FFA88C;
+$second-color:#FFE9FD;
+$third-color: #7482FF;
+$fourth-color: #F3F3F3;
+
+$main-link-size: 32px;
+
+$promo-border-top: 24px;
+$promo-border-left: 16px;
+
+main {
+  overflow: hidden;
+}
+
+.home {
+  max-width: 100vw;
+  padding-top: 24px;
+  
+  .menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 $mob-side-border;
+
+    @include w-from($screen-lg) {
+      margin: 0;
+    }
+
+    &-block {
+      margin-right: 9px;
+      margin-bottom: 24px;
+      @include w-from($screen-lg) {
+        margin-right: 32px;
+        margin-bottom: 32px;
+      }
+    }
+
+    &-text {
+      display: block;
+      max-width: 240px;
+
+      &__p {
+        margin-bottom: 16px;
+
+        & span {
+          font-weight: bold;
+        }
+      }
+    }
+  } 
+  & .menu-block__link,
+  & .menu-block__mainlink {
+    color: $white-link;
+  }
+
+  &-promo {
+    @include w-from($screen-lg) {
+      display: grid;
+      grid-template-areas: 
+      'one two'
+      'three two'
+      'four four';
+      grid-template-columns: 464px 655px;
+      gap: 24px 17px;
+    }
+
+    .text-container {
+      padding: 24px 0 8px $promo-border-left;
+    }
+
+    &__link {
+        font-size: $main-link-size;
+        font-weight: bold;
+        color: $text-color;
+        position: relative;
+    }
+
+    &__text {
+      display: block;
+      max-width: 300px;
+      margin-top: 8px;
+      font-size: $text-size;
+      &.lookbook {
+        @include w-from($screen-lg) {
+        position: absolute;
+        z-index: 2;
+        }
+      }
+    }
+
+    &__img {
+      &.lookbook {
+        max-width: 120%;
+        min-height: 50%;
+        position: relative;
+        object-fit: cover;
+        top: 8px;
+        left: -55px;
+        transform: rotate(-7.82deg);
+        @include w-from($screen-lg) {
+          z-index: 1;
+          top: 15px;
+          left: 25px;
+        }
+      }
+
+      &.originals {
+        max-width: 100%;
+        min-height: 60%;
+        object-fit: cover;
+        object-position: left top;
+        margin-left: $promo-border-left;
+        @include w-from($screen-lg) {
+          max-width: 120%;
+          width: 120%;
+          object-fit: none;
+          object-position: center top;
+        }
+      }
+      &.maison {
+        width: 100%;
+        object-fit: contain;
+        @include w-from($screen-lg) {
+          width: 100%;
+          height: 100%;
+          object-fit: none;
+        }
+      }
+    }
+
+    &-1 {
+      height: 320px;
+      background-color: $first-color;
+      overflow: hidden;
+      @extend %border-box;
+      @include w-from($screen-lg) { 
+        grid-area: one; 
+        overflow: visible;
+      }
+    }
+    &-2 {
+      height: 370px;
+      background-color: $second-color;
+      overflow: hidden;
+      @extend %border-box;
+      @include w-from($screen-lg) {
+        grid-area: two;
+        height: auto;
+        overflow: visible;
+      }
+    }
+    &-3 {
+      height: 200px;
+      color: $maincolor;
+      background-color: $third-color;
+      @extend %border-box;
+      & .home-promo__link {
+        color: $maincolor;
+        @include w-from($screen-lg) {
+          grid-area: three;
+          height: 160px;
+        }
+      }
+    }
+    &-4 {
+      height: 480px;
+      background-color: $fourth-color;
+      overflow: hidden;
+      @extend %border-box;
+      @include w-from($screen-lg) { grid-area: four;}
+    }
+  }
+}

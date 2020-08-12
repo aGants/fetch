@@ -1,0 +1,19 @@
+@import 'mixins.scss', 'vars.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0 auto;
+  font-family: PT Sans; 
+  background-color: $maincolor;
+}
+
+.container {
+  margin: 0 auto;
+  @include w-from($screen-lg) {
+    width: 1095px;
+  }
+}
