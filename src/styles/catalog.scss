@@ -1,0 +1,110 @@
+@import 'common/fonts.scss', 'common/mixins.scss', 'common/vars.scss',
+'common/main.scss', 'common/header.scss', 'common/footer.scss', 'common/catalog-nav.scss';
+
+$page-size: 15px;
+$page-chosen: 24px;
+
+main {
+  max-width: 100vw;
+  color: $text-color;
+  background-color: $maincolor;
+  border-top: 160px solid $bgcolor;
+  
+  .container {
+    margin-left: $mob-side-border;
+    margin-top: -160px;
+    @include w-from($screen-lg) {
+      margin: 0 auto;
+      margin-top: -160px;
+    }
+}
+.main {
+  &__title {
+    margin: 16px 0 24px;
+    font-size: $h1-size;
+    color: $maincolor;
+    @include w-from($screen-lg) {
+      margin: 24px 0 32px;
+    }
+  }
+
+  &-catalog {
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    &-item {
+      @include w-to($screen-lg) {
+        width: 42vw;
+        margin-right: 16px;
+      }
+      &__img {
+        display: block;
+        width: 100%;
+      }
+
+      &__link {
+        font-size: $small-text;
+        font-weight: bold;
+        &, &:visited {
+          color: $text-color;
+
+        }
+        &:hover, &:active:visited {
+          color: $white-link;
+        }
+        @include w-from($screen-lg) {
+          font-size: $text-size; 
+        }
+      }
+
+      &__type { 
+        font-size: $small-text;
+        margin: 4px 0 8px;
+        @include w-from($screen-lg) {
+          margin-bottom: 12px;
+        }
+        
+      }
+
+      &__price {
+        margin-bottom: 32px;
+        font-size: $text-size;
+        font-weight: bold;
+        @include w-from($screen-lg) {
+          margin-bottom: 48px;
+        }
+      }
+    }
+  }
+  &-nav {
+    margin: 40px 0;
+    @include w-from($screen-lg) {
+     margin: 64px 0; 
+    }
+    &__text {
+      font-size: $small-text;
+      color: $footer-text-color; 
+    }
+    &-pages {
+      &__p {
+        margin-right: 5px;
+        font-size: $page-size;
+        text-decoration: none;
+        &, &:visited {
+          color: $footer-text-color;
+        }
+        &:hover,:active {
+          color: $white-link;
+        }
+        &:first-child {
+          font-size: $page-chosen;
+          font-weight: bold;
+          color: $text-color;
+        }
+      }
+    }
+}
+}
+}
