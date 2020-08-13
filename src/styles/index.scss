@@ -23,23 +23,17 @@ main {
     flex-direction: row;
     flex-wrap: wrap;
     margin: 0 $mob-side-border;
-
     @include w-from($screen-lg) {
       margin: 0;
     }
 
-    &-block {
-      margin-right: 9px;
-      margin-bottom: 24px;
-      @include w-from($screen-lg) {
-        margin-right: 32px;
-        margin-bottom: 32px;
-      }
-    }
-
     &-text {
       display: block;
-      max-width: 240px;
+      width: 210px;
+      margin-right: 64px;
+      @include w-from($screen-lg) {
+        margin-right: 40px;
+      }
 
       &__p {
         margin-bottom: 16px;
@@ -47,6 +41,20 @@ main {
         & span {
           font-weight: bold;
         }
+      }
+    }
+
+    &-block {
+      margin-right: 9px;
+      margin-bottom: 24px;
+      width: 140px;
+      &:last-child{
+        width: 150px;
+      }
+      @include w-from($screen-lg) {
+        margin-right: 32px;
+        margin-bottom: 32px;
+        max-width: 100%;
       }
     }
   } 
