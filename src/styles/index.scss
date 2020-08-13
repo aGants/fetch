@@ -11,6 +11,11 @@ $main-link-size: 32px;
 $promo-border-top: 24px;
 $promo-border-left: 16px;
 
+header {
+  @extend %nav-dark;
+}
+
+
 main {
   overflow: hidden;
 }
@@ -47,9 +52,11 @@ main {
     &-block {
       margin-right: 9px;
       margin-bottom: 24px;
-      width: 140px;
+      width: 135px;
       &:last-child{
-        width: 150px;
+        // width: 150px;
+        // display: inline-block;
+        flex-grow: 10;
       }
       @include w-from($screen-lg) {
         margin-right: 32px;

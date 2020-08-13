@@ -1,0 +1,6 @@
+@import 'common/fonts.scss', 'common/mixins.scss', 'common/vars.scss',
+'common/main.scss', 'common/header.scss', 'common/footer.scss', 'common/item-catalog.scss';
+
+header {
+  @extend %nav-white;
+}

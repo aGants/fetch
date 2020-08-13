@@ -1,0 +1,58 @@
+- var classRadioColor = 'block-custom-color__radio';
+- var classRadioSize = 'block-custom-color__size';
+
+mixin radio(className, nameGroup, text)
+  p
+    input(class=className type='radio' name=nameGroup)
+    =text
+
+mixin li(name)
+  li(class='block-about__сontent__point')= name
+
+.block
+  .block-title
+    h1.block-title__title Maison Margiela Fusion Low Sneakers
+    p.block-title__type Кроссовки
+
+  .block-custom 
+
+    p.block-custom-color
+      span.block-custom-color__text Цвет
+      +radio(classRadioColor, 'color', 'Белый с розовым')
+      +radio(classRadioColor, 'color', 'Белый с зелёным')
+    p.block-custom-size
+      span.block-custom-color__text Размер US
+        +radio(classRadioSize, 'color', '6')
+        +radio(classRadioSize, 'color', '6.5')
+        +radio(classRadioSize, 'color', '7')
+        +radio(classRadioSize, 'color', '9')
+    a(href='#table-size').block-custom-table 
+    button Купить, 92 000 ₽
+
+
+  .block-about 
+    p.block-about-material
+      span.block-about__parameter Материал
+      p.block-about__content Кожа, текстиль
+    p.block-about-country
+      span.block-about__parameter Материал
+      p.block-about__content Кожа, текстиль
+    p.block-about-text
+      span.block-about__parameter Описание
+      p.block-about__content 
+        p Деконструктивный и авангардный дизайн с уникальными концепциями и нетрадиционным мастерством. 
+        p качестве материала используются два вида кожи. Верх дополнен деталями из сетчатого материала и текстиля. 
+        p Грубые и многослойные кроссовки показывают отличие от традиционного аккуратного стиля создания обуви. Они оснащены раскрашенной вручную резиновой подошвой с брызгами и потеками. 
+        p Оригинальная слегка асимметричная система шнуровки и фирменный стежок на заднике завершают уникальный внешний вид.
+    p.block-about-details
+      span.block-about__parameter Детали
+      ul.block-about__content 
+        +li('Два вида кожи')
+        +li('Детали из текстиля')
+        +li('Неординарная шнуровка')
+        +li('Перфорация на мыске')
+        +li('Стежок на заднике')
+        +li('Фигурная резиновая подошва')
+        +li('Цепкая подметка')
+        +li('Окрашивание с брызгами и потеками')
+        +li('Пестрая расцветка')

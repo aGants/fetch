@@ -78,33 +78,33 @@ header {
 
 }  
 
-.dark {
-  background-color: $dark-bg;
-  .nav-links__link, .nav__main, 
-  .nav-checkout__link {
-    @extend %dark-link;
-  }
+// .dark {
+//   background-color: $dark-bg;
+//   .nav-links__link, .nav__main, 
+//   .nav-checkout__link {
+//     @extend %dark-link;
+//   }
   
-  svg {
-    fill: $dark-text;
-  }
+//   svg {
+//     fill: $dark-text;
+//   }
 
-  a:hover svg {
-    fill: $dark-link;
-  }
-  }
+//   a:hover svg {
+//     fill: $dark-link;
+//   }
+//   }
 
-.white {
-  background-color: $white-bg;
-  .nav-links__link, .nav__main, 
-  .nav-checkout__link {
-    @extend %white-link;
-  }
-  svg {
-    fill: $white-text;
-  }
+// .white {
+//   background-color: $white-bg;
+//   .nav-links__link, .nav__main, 
+//   .nav-checkout__link {
+//     @extend %white-link;
+//   }
+//   svg {
+//     fill: $white-text;
+//   }
 
-  a:hover svg {
-    fill: $white-link;
-  }
-}
+//   a:hover svg {
+//     fill: $white-link;
+//   }
+// }

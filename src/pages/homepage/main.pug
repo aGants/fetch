@@ -1,41 +1,38 @@
-main
-  .slider
+.container
+  .home
+    .menu
+      .menu-text 
+        p.menu-text__p <span>Фетч</span> — мультибрендовый магазин модной одежды. 
+        p.menu-text__p Следим за трендами и часто обновляем ассортимент. 
+        p.menu-text__p Доставляем по Москве за день, по России — за неделю.
+      include ../common/catalog-nav
 
-  .container
-    .home
-      .menu
-        .menu-text 
-          p.menu-text__p <span>Фетч</span> — мультибрендовый магазин модной одежды. 
-          p.menu-text__p Следим за трендами и часто обновляем ассортимент. 
-          p.menu-text__p Доставляем по Москве за день, по России — за неделю.
-        include ../common/catalog-nav
+    .home-promo    
+      .home-promo-1
+        .text-container
+          a(href="item.html").home-promo__link.lookbook Лукбук, лeто 2019
+          span.home-promo__text.lookbook Стильные образы для тёплых деньков
+        picture
+          source(media="(max-width: 767px)" srcset="assets/images/m-lookbook-summer.png" type="image/jpeg")
+          source(media="(min-width: 1200px)" srcset="assets/images/lookbook-summer.png" type="image/jpeg")
+          img.home-promo__img.lookbook(src="assets/images/lookbook-summer.png", alt="Maison Margiela Fusion")
 
-      .home-promo    
-        .home-promo-1
-          .text-container
-            a(href="").home-promo__link.lookbook Лукбук, лeто 2019
-            span.home-promo__text.lookbook Стильные образы для тёплых деньков
-          picture
-            source(media="(max-width: 767px)" srcset="assets/images/m-lookbook-summer.png" type="image/jpeg")
-            source(media="(min-width: 1200px)" srcset="assets/images/lookbook-summer.png" type="image/jpeg")
-            img.home-promo__img.lookbook(src="assets/images/lookbook-summer.png", alt="Maison Margiela Fusion")
+      .home-promo-2 
+        .text-container
+          a(href="item.html").home-promo__link Новая коллекция adidas <span>Originals
+          span.home-promo__text Десять крутейших кроссовок
+        img.home-promo__img.originals(src="assets/images/originals.png", alt="adidas Originals")
 
-        .home-promo-2 
-          .text-container
-            a(href="").home-promo__link Новая коллекция adidas <span>Originals
-            span.home-promo__text Десять крутейших кроссовок
-          img.home-promo__img.originals(src="assets/images/originals.png", alt="adidas Originals")
-
-        .home-promo-3
-          .text-container
-            a(href="").home-promo__link Выбор редакции: часы
-            span.home-promo__text ТОП-5 лучших предложений по версии администрации Фетч
-        
-        .home-promo-4
-          .text-container
-            a(href="").home-promo__link.maison Предзаказ: Maison Margiela Fusion
-            span.home-promo__text.maison от 92 000 ₽
-          picture
-            source(media="(max-width: 767px)" srcset="assets/images/m-preoder.jpg" type="image/jpeg")
-            source(media="(min-width: 1200px)" srcset="assets/images/preoder.jpg" type="image/jpeg")
-            img.home-promo__img.maison(src="assets/images/preoder.jpg", alt="Maison Margiela Fusion")
+      .home-promo-3
+        .text-container
+          a(href="item.html").home-promo__link Выбор редакции: часы
+          span.home-promo__text ТОП-5 лучших предложений по версии администрации Фетч
+      
+      .home-promo-4
+        .text-container
+          a(href="item.html").home-promo__link.maison Предзаказ: Maison Margiela Fusion
+          span.home-promo__text.maison от 92 000 ₽
+        picture
+          source(media="(max-width: 767px)" srcset="assets/images/m-preoder.jpg" type="image/jpeg")
+          source(media="(min-width: 1200px)" srcset="assets/images/preoder.jpg" type="image/jpeg")
+          img.home-promo__img.maison(src="assets/images/preoder.jpg", alt="Maison Margiela Fusion")
