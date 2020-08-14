@@ -1,3 +1,9 @@
+mixin picture(name, img, mimg, classname)
+  picture
+    source(media="(max-width: 767px)" srcset='assets/images/'+mimg type="image/jpeg")
+    source(media="(min-width: 1200px)" srcset='assets/images/'+img type="image/jpeg")
+    img(class=classname, src='assets/images/'+img, alt=name)
+
 .container
   .home
     .menu
@@ -12,10 +18,7 @@
         .text-container
           a(href="item.html").home-promo__link.lookbook Лукбук, лeто 2019
           span.home-promo__text.lookbook Стильные образы для тёплых деньков
-        picture
-          source(media="(max-width: 767px)" srcset="assets/images/m-lookbook-summer.png" type="image/jpeg")
-          source(media="(min-width: 1200px)" srcset="assets/images/lookbook-summer.png" type="image/jpeg")
-          img.home-promo__img.lookbook(src="assets/images/lookbook-summer.png", alt="Maison Margiela Fusion")
+        +picture('Lookbook, summer 2019', 'lookbook-summer.png', 'm-lookbook-summer.png', 'home-promo__img lookbook')
 
       .home-promo-2 
         .text-container
@@ -32,7 +35,4 @@
         .text-container
           a(href="item.html").home-promo__link.maison Предзаказ: Maison Margiela Fusion
           span.home-promo__text.maison от 92 000 ₽
-        picture
-          source(media="(max-width: 767px)" srcset="assets/images/m-preoder.jpg" type="image/jpeg")
-          source(media="(min-width: 1200px)" srcset="assets/images/preoder.jpg" type="image/jpeg")
-          img.home-promo__img.maison(src="assets/images/preoder.jpg", alt="Maison Margiela Fusion")
+        +picture('Maison Margiela Fusion', 'preoder.jpg', 'm-preoder.jpg', 'home-promo__img maison')

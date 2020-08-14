@@ -29,7 +29,6 @@ $white-link: #4541FE;
 $dark-bg: #000000;
 $dark-text: #ffffff;
 $dark-link: #9f9f9f;
-$dark-header: linear-gradient(269.92deg, rgba(0, 0, 0, 0) 0.07%, #0C0C0C 99.93%);
 
 %dark-link {
   & { color: $dark-text;
@@ -41,12 +40,14 @@ $dark-header: linear-gradient(269.92deg, rgba(0, 0, 0, 0) 0.07%, #0C0C0C 99.93%)
 }
 
 %white-link {
-   & { color: $white-text;
+   & { 
+     color: $white-text;
      &:hover,
      &:active {
        color: $white-link;
        border-color: $white-link;
-     }}
+     }
+  }
 }
 
 //color-theme
@@ -55,17 +56,10 @@ $dark-header: linear-gradient(269.92deg, rgba(0, 0, 0, 0) 0.07%, #0C0C0C 99.93%)
 
   .nav-links__link,
   .nav__main,
-  .nav-checkout__link {
-    @extend %dark-link;
-  }
+  .nav-checkout__link { @extend %dark-link; }
 
-  svg {
-    fill: $dark-text;
-  }
-
-  a:hover svg {
-    fill: $dark-link;
-  }
+  svg { fill: $dark-text; }
+  a:hover svg { fill: $dark-link; }
 }
 
 %nav-white {
@@ -73,15 +67,9 @@ $dark-header: linear-gradient(269.92deg, rgba(0, 0, 0, 0) 0.07%, #0C0C0C 99.93%)
 
   .nav-links__link,
   .nav__main,
-  .nav-checkout__link {
-    @extend %white-link;
-  }
+  .nav-checkout__link { @extend %white-link; }
 
-  svg {
-    fill: $white-text;
-  }
+  svg { fill: $white-text; }
 
-  a:hover svg {
-    fill: $white-link;
-  }
+  a:hover svg { fill: $white-link; }
 }

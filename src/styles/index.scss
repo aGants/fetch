@@ -9,7 +9,19 @@ $fourth-color: #F3F3F3;
 $promo-border-top: 24px;
 $promo-border-left: 16px;
 
-header { @extend %nav-dark;}
+body { margin-top: -48px; }
+
+.slick-slider {
+  // height: 600px;
+  @include w-from($screen-lg) { 
+    max-width: 1440px; 
+  }
+}
+
+header { 
+  position: relative;
+  top: 48px;
+  z-index: 2; }
 
 main { overflow: hidden; }
 
@@ -165,22 +177,3 @@ main { overflow: hidden; }
   }
 }
 
-
-.slider {
-  &__item {
-    width: 100vw;
-  }
-  & .slick-arrow {
-    margin: 0 10px;
-    filter: brightness(70%);
-    cursor: pointer;
-
-    &:hover {
-      filter: none;
-    }
-  }
-
-  & .slick-track {
-    display: flex;
-  }
-}
