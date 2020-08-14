@@ -1,24 +1,16 @@
-@import 'common/fonts.scss', 'common/mixins.scss', 'common/vars.scss',
-'common/main.scss', 'common/header.scss', 'common/footer.scss', 'common/catalog-nav.scss';
+@import 'common/main.scss', 'common/footer.scss', 'common/catalog-nav.scss';
 
 $first-color: #FFA88C;
 $second-color:#FFE9FD;
 $third-color: #7482FF;
 $fourth-color: #F3F3F3;
 
-$main-link-size: 32px;
-
 $promo-border-top: 24px;
 $promo-border-left: 16px;
 
-header {
-  @extend %nav-dark;
-}
+header { @extend %nav-dark;}
 
-
-main {
-  overflow: hidden;
-}
+main { overflow: hidden; }
 
 .home {
   max-width: 100vw;
@@ -28,24 +20,17 @@ main {
     flex-direction: row;
     flex-wrap: wrap;
     margin: 0 $mob-side-border;
-    @include w-from($screen-lg) {
-      margin: 0;
-    }
+    @include w-from($screen-lg) { margin: 0; }
 
     &-text {
       display: block;
       width: 210px;
       margin-right: 64px;
-      @include w-from($screen-lg) {
-        margin-right: 40px;
-      }
+      @include w-from($screen-lg) { margin-right: 40px; }
 
       &__p {
         margin-bottom: 16px;
-
-        & span {
-          font-weight: bold;
-        }
+        & span { font-weight: bold; }
       }
     }
 
@@ -53,22 +38,19 @@ main {
       margin-right: 9px;
       margin-bottom: 24px;
       width: 135px;
-      &:last-child{
-        // width: 150px;
-        // display: inline-block;
-        flex-grow: 10;
-      }
+      &:last-child{ flex-grow: 10; }
       @include w-from($screen-lg) {
         margin-right: 32px;
         margin-bottom: 32px;
         max-width: 100%;
       }
     }
+    &-block__link,
+    &-block__mainlink {
+      color: $white-link;
+    }
   } 
-  & .menu-block__link,
-  & .menu-block__mainlink {
-    color: $white-link;
-  }
+  
 
   &-promo {
     @include w-from($screen-lg) {
@@ -86,7 +68,7 @@ main {
     }
 
     &__link {
-        font-size: $main-link-size;
+        font-size: $big-size;
         font-weight: bold;
         color: $text-color;
         position: relative;
@@ -146,9 +128,7 @@ main {
       height: 320px;
       background-color: $first-color;
       @extend %border-box;
-      @include w-from($screen-lg) { 
-        grid-area: one; 
-      }
+      @include w-from($screen-lg) { grid-area: one; }
     }
     &-2 {
       height: 370px;
@@ -179,7 +159,7 @@ main {
       background-color: $fourth-color;
       overflow: hidden;
       @extend %border-box;
-      @include w-from($screen-lg) { grid-area: four;}
+      @include w-from($screen-lg) { grid-area: four; }
     }
   }
 }

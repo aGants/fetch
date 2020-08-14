@@ -1,6 +1,29 @@
-@import 'common/fonts.scss', 'common/mixins.scss', 'common/vars.scss',
-'common/main.scss', 'common/header.scss', 'common/footer.scss', 'common/item-catalog.scss';
+@import 'common/main.scss', 'common/footer.scss', 'common/catalog-item.scss';
+
+.slider {
+  display: block;
+  width: 288px;
+  height: 288px;
+  background-color: #F2F2F2;
+}
 
 header {
   @extend %nav-white;
+}
+
+.container {
+  
+}
+
+.main {
+  @include w-to($screen-lg){
+    display: flex;
+    flex-direction: column;
+    margin: 0 $mob-side-border;
+    max-width: 100vw;
+  }
+}
+
+.block {
+
 }

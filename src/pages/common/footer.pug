@@ -1,7 +1,7 @@
 mixin link(href, name)
   a(class="menu-block__link" href=href)=name
 
-footer
+footer.footer
   .container
     .menu
       .menu-block
@@ -16,6 +16,8 @@ footer
       include catalog-nav
     .footer-info 
       span.footer-info__text © Фетч-команда, 2019
-      a.footer-info__popup(href='#rules') Правила обработки персональных данных
-      a.footer-info__popup(href='#suppurt') Разработка и поддержка сайта
+      a.footer-info__link.popup(href='#rules') Правила обработки персональных данных
+      a.footer-info__link(href='') Разработка и поддержка сайта
+    .footer-rules.mfp-hide#rules
+      include rules.pug
   

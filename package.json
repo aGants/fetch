@@ -9,7 +9,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "jquery": "^3.5.1",
+    "magnific-popup": "^1.1.0",
+    "slick-carousel": "^1.8.1",
+    "webpack-stream": "^5.2.1"
   },
   "dependencies": {
     "autoprefixer": "^9.8.6",
@@ -25,7 +29,6 @@
     "gulp-typograf": "^4.0.3",
     "gulp-uglify-es": "^2.0.0",
     "path": "^0.12.7",
-    "webpack": "^4.44.1",
-    "webpack-stream": "^5.2.1"
+    "webpack": "^4.44.1"
   }
 }
