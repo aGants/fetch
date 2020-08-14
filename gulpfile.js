@@ -58,7 +58,7 @@ function buildAssets() {
 }
 
 function buildScripts() {
-  return src('src/scripts/script.js')  
+  return src('src/scripts/*.js')  
     .pipe(webpack({ output: { filename: 'bundle.js' }}))
     .pipe(uglify())
     .pipe(dest('build/scripts/'));

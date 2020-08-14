@@ -1,0 +1,37 @@
+.slick-list {
+  overflow: hidden;
+  padding: 0;
+}
+
+.slick-slider {
+  position: relative;
+}
+
+.slick-slide {
+  outline: none;
+
+  &:active {
+    outline: none
+  }
+}
+
+.slick-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  height: 32px;
+  width: 26px;
+  font-size: 0;
+  outline: none;
+  border: 0;
+
+  &.slick-prev {
+    left: 0;
+    // background: url('../assets/images/arr-left.svg') 0 0 / 100% no-repeat;
+  }
+
+  &.slick-next {
+    right: 0;
+    // background: url('../assets/images/arr-right.svg') 0 0 / 100% no-repeat;
+  }
+}
