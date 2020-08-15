@@ -14,6 +14,8 @@ const typograf     = require('gulp-typograf');
 const uglify       = require('gulp-uglify-es').default;
 const concat       = require('gulp-concat');
 const webpack      = require('webpack-stream');
+const glob         = require('glob');
+
 
 function ghPages(cb) {
   ghpages.publish(path.join(process.cwd(), './build'), cb);
@@ -43,7 +45,6 @@ function buildPages () {
 function buildStyles() {
   return src('src/styles/*.scss')
     .pipe(sass())
-    // .pipe(concat('style.css'))
     .pipe(postcss([
       autoprefixer(),
       cssnano()
@@ -58,8 +59,8 @@ function buildAssets() {
 }
 
 function buildScripts() {
-  return src('src/scripts/*.js')  
-    .pipe(webpack({ output: { filename: 'bundle.js' }}))
+  return src('src/scripts/*.js')
+    .pipe(webpack({ output: { filename: 'index.js' }}))
     .pipe(uglify())
     .pipe(dest('build/scripts/'));
 }

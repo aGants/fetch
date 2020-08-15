@@ -1,26 +1,46 @@
-@import 'common/main.scss', 'common/footer.scss', 'common/catalog-item.scss';
+@import 'common/main.scss', 'common/footer.scss', 
+'common/catalog-item.scss', 'lib/slick-carousel.scss';
+
+$lg-side-border: 24px;
 
 .slider {
   display: block;
-  width: 288px;
-  height: 288px;
   background-color: #F2F2F2;
+  @include w-from ($screen-lg) { 
+    grid-column: 2; 
+    grid-row: 1;
+  }
 }
 
-header { @extend %nav-white; }
+header { 
+  @extend %nav-white;
+}
 
 .main {
+    @include w-from ($screen-lg) {
+      display: grid;
+      grid-template-columns: 450px 656px;
+      gap: 54px;
+      margin-top: 41px;
+      margin: 41px auto 64px;
+    }
+}
+
+.item {
   display: flex;
   flex-direction: column;
   max-width: 100vw;
   overflow: hidden;
-  @include w-to($screen-lg) {
-
+  @include w-from ($screen-lg) { 
+    grid-column: 1;
+    grid-row: 1;
   }
 
   &-title {
     margin: 0 $mob-side-border;
+    @include w-from ($screen-lg) { margin: 0 $lg-side-border; }
     &__name {
+      margin-bottom: 8px;
       font-size: $big-size;
       font-weight: bold;
     }
@@ -31,6 +51,11 @@ header { @extend %nav-white; }
     margin: 16px 0 24px;
     padding: 24px 16px 32px;
     background-color: $bgtextcolor;
+    @include w-from ($screen-lg) { 
+      margin: 32px 0 40px; 
+      padding-left: 24px;
+    }
+    
     &-block {
       margin-bottom: 24px;
       display: block;
@@ -38,6 +63,11 @@ header { @extend %nav-white; }
       &__text{
         display: block;
         font: $middle-text;
+        @include w-from ($screen-lg) { 
+          display: inline-block;
+          width: 80px;
+          margin-right: 20px;
+        }
       }
 
       &-radio {
@@ -45,11 +75,15 @@ header { @extend %nav-white; }
         display: inline-block;
         margin-right: 10px;
         color: $input-active;
+        @include w-from ($screen-lg) {
+          margin-top: 0;
+        }
 
         & input[type=radio]:checked + &__label {
           background: $input-active;
           color: #ffffff;
         }
+
         &__input { display: none; }
         &__label {
           display: inline-block;
@@ -67,22 +101,27 @@ header { @extend %nav-white; }
         }
       }
     }
-  &__table {
-    &, link { color: $text-color;}
-    &:hover { color: $white-link; }
-  }
-  &__button {
-    display: block;
-    margin-top: 40px;
-    @extend %button-style;
-  }
+    &__table {
+      &, link { color: $text-color;}
+      &:hover { color: $white-link; }
+    }
+    &__button {
+      display: block;
+      margin-top: 40px;
+      @extend %button-style;
+    }
   } 
 
   &-about {
     margin: 0 $mob-side-border;
+    margin-bottom: 56px;
     display: grid;
     gap: 24px;
-    &__parameter {
+    @include w-from ($screen-lg) { 
+      gap: 32px;
+      max-width: 380px;
+    }
+    &__parameter { 
       font-size: $small-text;
       color: $lightest-color;
     }
@@ -90,7 +129,12 @@ header { @extend %nav-white; }
       list-style-type: none;
       &:before { content: '– '}
     }
-    &__content {font-size: $middle-text}
+    &__content { font-size: $middle-text; }
+
+    .paragraph {
+      margin-bottom: 24px;
+    }
+
     &-material { grid-column: 1; }
     &-country { grid-column: 2; }
     &-text { grid-column: 1/3; }

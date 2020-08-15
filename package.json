@@ -21,6 +21,7 @@
     "cssnano": "^4.1.10",
     "del": "^5.1.0",
     "gh-pages": "^3.1.0",
+    "glob": "^7.1.6",
     "gulp-concat": "^2.6.1",
     "gulp-imagemin": "^7.1.0",
     "gulp-postcss": "^8.0.0",
@@ -29,6 +30,7 @@
     "gulp-typograf": "^4.0.3",
     "gulp-uglify-es": "^2.0.0",
     "path": "^0.12.7",
+    "vinyl-named": "^1.1.0",
     "webpack": "^4.44.1"
   }
 }

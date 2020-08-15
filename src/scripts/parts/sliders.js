@@ -2,7 +2,7 @@ export default function initSliders() {
   const $ = require('jquery');
   require('slick-carousel');
 
-  $('.slider').slick({
+  $('.slider-home').slick({
     centerMode: true,
     infinite: true,
     arrows: true,
