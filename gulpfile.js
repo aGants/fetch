@@ -15,6 +15,7 @@ const uglify       = require('gulp-uglify-es').default;
 const concat       = require('gulp-concat');
 const webpack      = require('webpack-stream');
 const glob         = require('glob');
+const named        = require('vinyl-named');
 
 
 function ghPages(cb) {
@@ -60,7 +61,8 @@ function buildAssets() {
 
 function buildScripts() {
   return src('src/scripts/*.js')
-    .pipe(webpack({ output: { filename: 'index.js' }}))
+    .pipe(named())
+    .pipe(webpack())
     .pipe(uglify())
     .pipe(dest('build/scripts/'));
 }
