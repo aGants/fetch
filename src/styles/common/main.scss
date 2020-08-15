@@ -5,10 +5,14 @@
   padding: 0;
 }
 
+html {
+}
+
 body {
   margin: 0 auto;
   font-family: PT Sans; 
   background-color: $maincolor;
+  overflow-x: hidden;
 }
 
 .container {

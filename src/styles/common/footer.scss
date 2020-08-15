@@ -5,6 +5,7 @@
   padding: 32px $mob-side-border 72px;
   background-color: $bgcolor;
   color: $footercolor;
+  overflow: hidden;
   @include w-from($screen-lg) { margin-top: 64px; }
 
   &-info {
@@ -27,18 +28,48 @@
     }
   }
   &-rules {
-    position: relative;
-    width: 40%;
-    margin: auto;
-    padding: 60px 100px 100px 30px;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 20px;
+    margin: -10px;
     font: $text-size;
     color: #000000;
     background-color: #ffffff;
+    overflow-y: auto;
+    @include w-from($screen-lg) {
+      margin: 0 auto;
+      width: 40%;
+      padding: 60px 100px 100px 30px;
+      top: 10%;
+      bottom: 10%;
+    }
 
-    &__title {font-size: $big-size; }
+    &__close {
+      position: absolute;
+      right: 0;
+      top: 0;
+      margin: 40px 50px;
+      user-select: none;
+      cursor: pointer;
+      @include w-from($screen-lg) {
+        margin: 20px;
+      }
+    }
+
+    &__title { 
+      font-size: $big-size; 
+    @include w-to($screen-lg) {
+      width: 85vw;
+    }
+    }
 
     &__text { 
       margin-top: 15px;
+      @include w-to($screen-lg) { width: 95vw; }
       &-sub {
         display: block;
         margin: 5px 20px;
@@ -77,15 +108,4 @@
       &.fetch { text-decoration: none; }
     }
   }
-}
-
-.mfp-close {
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 30px;
-  height: 30px;
-  margin: 20px;
-  user-select: none;
-  cursor: pointer;
 }

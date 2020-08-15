@@ -14,7 +14,6 @@ const typograf     = require('gulp-typograf');
 const uglify       = require('gulp-uglify-es').default;
 const concat       = require('gulp-concat');
 const webpack      = require('webpack-stream');
-const glob         = require('glob');
 const named        = require('vinyl-named');
 
 
