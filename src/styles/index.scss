@@ -12,10 +12,7 @@ $promo-border-left: 16px;
 body { margin-top: -48px; }
 
 .slick-slider {
-  // height: 600px;
-  @include w-from($screen-lg) { 
-    max-width: 1440px; 
-  }
+  @include w-from($screen-lg) { max-width: 1440px; }
 }
 
 header { 
@@ -168,7 +165,7 @@ main { overflow: hidden; }
       }
     }
     &-4 {
-      height: 480px;
+      max-height: 480px;
       background-color: $fourth-color;
       overflow: hidden;
       @extend %border-box;

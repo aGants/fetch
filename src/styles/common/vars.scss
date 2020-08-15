@@ -4,17 +4,38 @@ $screen-lg: 1200px;
 $text-color: #000000;
 $maincolor: #ffffff;
 $bgcolor: #000000;
+$bgtextcolor: #F2F2F2;
 $footercolor: #ffffff;
 $footer-text-color: #666666;
+$lightest-color: #AFAFAF;
+
 
 $text-size: 16px;
+$middle-text: 18px;
 $small-text: 13px;
 $big-size: 32px;
 $nav-main-font-size: 24px;
-$link-main-font-size: 18px;
 
 $mob-side-border: 16px;
 %border-box { box-sizing: border-box; }
+
+$input: #FBFBFB;
+$input-active: #666666;
+$input-border: #DDDDDD;
+
+%button-style {
+  padding: 10px 26px;
+  font-size: $text-size;
+  font-weight: bold;
+  background: linear-gradient(180deg, #FFC908 0%, #FFBA08 100%);
+  box-shadow: 0px 0px 15px rgba(255, 146, 17, 0.5);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    background: linear-gradient(180deg, #F5BF00 0%, #F0AD00 100%);
+  }
+}
 
 
 .mod-only-lg {

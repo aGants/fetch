@@ -1,58 +1,58 @@
-- var classRadioColor = 'block-custom-color__radio';
-- var classRadioSize = 'block-custom-color__size';
+- var classRadioColor = 'radio-color main-custom-block-radio';
+- var classRadioSize = 'radio-size main-custom-block-radio';
 
-mixin radio(className, nameGroup, text)
-  p
-    input(class=className type='radio' name=nameGroup)
-    =text
+mixin radio(className, nameGroup, text, number)
+  div(class=className)
+    input(class=className+'__input' id='radio-'+nameGroup+number type='radio' name=nameGroup)
+    label(for='radio-'+nameGroup+number class=className+'__label')= text
 
 mixin li(name)
-  li(class='block-about__сontent__point')= name
+  li(class='main-about__point')= name
 
 
-.block
-  .block-title
-    h1.block-title__title Maison Margiela Fusion Low Sneakers
-    p.block-title__type Кроссовки
+.main-title
+  h1.main-title__name Maison Margiela Fusion Low Sneakers
+  p.main-title__type Кроссовки
 
-  .block-custom 
+.main-custom
+  .main-custom-block
+    span.main-custom-block__text Цвет
+    .main-custom-block-radio
+      +radio(classRadioColor, 'color', 'Белый с розовым', '1')
+      +radio(classRadioColor, 'color', 'Белый с зелёным', '2')
+  .main-custom-block
+    span.main-custom-block__text Размер US
+    .main-custom-block-radio
+      +radio(classRadioSize, 'size', '6', '1')
+      +radio(classRadioSize, 'size', '6,5', '2')
+      +radio(classRadioSize, 'size', '7', '3')
+      +radio(classRadioSize, 'size', '9', '4')
+  a(href='#table-size').main-custom__table Таблица размеров
+  button.main-custom__button Купить, 92 000 ₽
 
-    p.block-custom-color
-      span.block-custom-color__text Цвет
-      +radio(classRadioColor, 'color', 'Белый с розовым')
-      +radio(classRadioColor, 'color', 'Белый с зелёным')
-    p.block-custom-size
-      span.block-custom-color__text Размер US
-        +radio(classRadioSize, 'color', '6')
-        +radio(classRadioSize, 'color', '6.5')
-        +radio(classRadioSize, 'color', '7')
-        +radio(classRadioSize, 'color', '9')
-    a(href='#table-size').block-custom-table 
-    button Купить, 92 000 ₽
-
-  .block-about 
-    p.block-about-material
-      span.block-about__parameter Материал
-      p.block-about__content Кожа, текстиль
-    p.block-about-country
-      span.block-about__parameter Материал
-      p.block-about__content Кожа, текстиль
-    p.block-about-text
-      span.block-about__parameter Описание
-      p.block-about__content 
-        p Деконструктивный и авангардный дизайн с уникальными концепциями и нетрадиционным мастерством. 
-        p качестве материала используются два вида кожи. Верх дополнен деталями из сетчатого материала и текстиля. 
-        p Грубые и многослойные кроссовки показывают отличие от традиционного аккуратного стиля создания обуви. Они оснащены раскрашенной вручную резиновой подошвой с брызгами и потеками. 
-        p Оригинальная слегка асимметричная система шнуровки и фирменный стежок на заднике завершают уникальный внешний вид.
-    p.block-about-details
-      span.block-about__parameter Детали
-      ul.block-about__content 
-        +li('Два вида кожи')
-        +li('Детали из текстиля')
-        +li('Неординарная шнуровка')
-        +li('Перфорация на мыске')
-        +li('Стежок на заднике')
-        +li('Фигурная резиновая подошва')
-        +li('Цепкая подметка')
-        +li('Окрашивание с брызгами и потеками')
-        +li('Пестрая расцветка')
+.main-about 
+  .main-about-material
+    span.main-about__parameter Материал
+    p.main-about__content Кожа, текстиль
+  .main-about-country
+    span.main-about__parameter Страна-производитель
+    p.main-about__content Италия
+  .main-about-text
+    span.main-about__parameter Описание
+    p.main-about__content 
+      p Деконструктивный и авангардный дизайн с уникальными концепциями и нетрадиционным мастерством. 
+      p качестве материала используются два вида кожи. Верх дополнен деталями из сетчатого материала и текстиля. 
+      p Грубые и многослойные кроссовки показывают отличие от традиционного аккуратного стиля создания обуви. Они оснащены раскрашенной вручную резиновой подошвой с брызгами и потеками. 
+      p Оригинальная слегка асимметричная система шнуровки и фирменный стежок на заднике завершают уникальный внешний вид.
+  .main-about-details
+    span.main-about__parameter Детали
+    ul.main-about__content 
+      +li('Два вида кожи')
+      +li('Детали из текстиля')
+      +li('Неординарная шнуровка')
+      +li('Перфорация на мыске')
+      +li('Стежок на заднике')
+      +li('Фигурная резиновая подошва')
+      +li('Цепкая подметка')
+      +li('Окрашивание с брызгами и потеками')
+      +li('Пестрая расцветка')

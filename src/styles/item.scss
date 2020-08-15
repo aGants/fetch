@@ -7,23 +7,93 @@
   background-color: #F2F2F2;
 }
 
-header {
-  @extend %nav-white;
-}
-
-.container {
-  
-}
+header { @extend %nav-white; }
 
 .main {
-  @include w-to($screen-lg){
-    display: flex;
-    flex-direction: column;
-    margin: 0 $mob-side-border;
-    max-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  max-width: 100vw;
+  overflow: hidden;
+  @include w-to($screen-lg) {
+
   }
-}
 
-.block {
+  &-title {
+    margin: 0 $mob-side-border;
+    &__name {
+      font-size: $big-size;
+      font-weight: bold;
+    }
+    &__type { font-size: $small-text; }
+  }
 
+  &-custom {
+    margin: 16px 0 24px;
+    padding: 24px 16px 32px;
+    background-color: $bgtextcolor;
+    &-block {
+      margin-bottom: 24px;
+      display: block;
+
+      &__text{
+        display: block;
+        font: $middle-text;
+      }
+
+      &-radio {
+        margin-top: 8px;
+        display: inline-block;
+        margin-right: 10px;
+        color: $input-active;
+
+        & input[type=radio]:checked + &__label {
+          background: $input-active;
+          color: #ffffff;
+        }
+        &__input { display: none; }
+        &__label {
+          display: inline-block;
+          min-width: 32px;
+          padding: 0px 8px;
+          text-align: center;
+          font: $text-size;
+          line-height: 34px;
+          background: $input;
+          border: 1px solid $input-border;
+          border-radius: 8px;
+          user-select: none;
+          cursor: pointer;
+          &:hover { border-color: $input-active; }
+        }
+      }
+    }
+  &__table {
+    &, link { color: $text-color;}
+    &:hover { color: $white-link; }
+  }
+  &__button {
+    display: block;
+    margin-top: 40px;
+    @extend %button-style;
+  }
+  } 
+
+  &-about {
+    margin: 0 $mob-side-border;
+    display: grid;
+    gap: 24px;
+    &__parameter {
+      font-size: $small-text;
+      color: $lightest-color;
+    }
+    &__point {
+      list-style-type: none;
+      &:before { content: '– '}
+    }
+    &__content {font-size: $middle-text}
+    &-material { grid-column: 1; }
+    &-country { grid-column: 2; }
+    &-text { grid-column: 1/3; }
+    &-details { grid-column: 1/3; }
+  }
 }
