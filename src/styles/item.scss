@@ -121,14 +121,17 @@ header {
       gap: 32px;
       max-width: 380px;
     }
+
     &__parameter { 
       font-size: $small-text;
       color: $lightest-color;
     }
+
     &__point {
       list-style-type: none;
       &:before { content: '– '}
     }
+
     &__content { font-size: $middle-text; }
 
     .paragraph {
@@ -144,27 +147,47 @@ header {
   &-size {
     position: relative;
     @extend %border-box;
-    width: 688px;
+    width: 100%;
     margin: auto;
     padding: 16px 24px 32px;
     font: $text-size;
     color: #000000;
     background-color: #ffffff;
     box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.25);
+    @include w-from ($screen-lg) {
+      width: 688px;
+    }
+    ::-webkit-scrollbar {
+      width: 0px;
+      background: transparent;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
 
+    &-container {
+      overflow-x: auto;
+       @include w-to($screen-lg) {
+         mask-image: linear-gradient(90deg,
+             transparent 0, rgba(0, 0, 0, .25) 0px,
+             #000 23px,
+             #000 calc(100% - 23px),
+             rgba(0, 0, 0, .25) calc(100% - 9px),
+             transparent);
+       }
+    }
+    
     &__title {
       font-size: 25px;
       font-weight: bold;
       margin-bottom: 24px;
     }
-
+    
     &-table {
-      width: 100%;
+      width: 640px;
       text-align: center;
       font-size: $text-size;
       border-collapse: collapse;
       border: 1px solid $input-border;
-      overflow-x: auto;
       &__th {
         width: 72px;
         height: 32px;
@@ -173,14 +196,18 @@ header {
         border: 1px solid $input-border;
       }
     }
-    .mfp-close {
+    &__close{
       position: absolute;
-      left: 315px;
-      top: 11px;
-      width: 100%;
+      right: 0;
+      top: 0;
+      margin: 11px;
+      // width: 100%;
       user-select: none;
       cursor: pointer;
       fill:$input-border;
+      @include w-from ($screen-lg) {
+        left: 315px;
+      }
     }
   }
 }
