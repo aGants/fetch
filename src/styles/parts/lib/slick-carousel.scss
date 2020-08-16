@@ -28,20 +28,17 @@
     outline: none;
     border: 0;
     cursor: pointer;
-    &:hover {
-      filter: none;
-    }
   
     &.slick-prev {
-      left: 8px;
-      @include w-from($screen-lg) { left: 32px; }
-      background: url('../assets/icons/arr-left.svg') 0 0 / 100% no-repeat;
+      font-size: 0;
+      background-color: transparent;
+      @extend %icon-arr-left;
     }
   
     &.slick-next {
-      right: 8px;
-      @include w-from($screen-lg) { right: 32px; }
-      background: url('../assets/icons/arr-right.svg') 0 0 / 100% no-repeat;
+      font-size: 0;
+      background-color: transparent;
+      @extend %icon-arr-right;
     }
   }
 }

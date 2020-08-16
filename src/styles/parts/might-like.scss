@@ -1,7 +1,6 @@
 @import 'one-item.scss';
 
 .might-like {
-  overflow: hidden;
   margin: 0 $mob-side-border;
   @include w-from ($screen-lg) {
     width: $container;
@@ -24,12 +23,28 @@
       margin: 0 40px;
     }
   }
-  & .slick-arrow {
-    width: 28.24px;
-    height: 24px;
-    fill: #000000;
-  }
 
+  .slick-arrow {
+    &.slick-prev {
+      left: -36px;
+      @include w-from($screen-lg) { left: -48px;}
+    }
+    &.slick-next {
+      right: -36px;
+      @include w-from($screen-lg) { right: -48px; }
+    }
+    &.slick-prev:before,
+    &.slick-next:before {
+      font-size: 24px;
+      color: #393939;
+    }
+
+    &:hover.slick-prev:before,
+    &:hover.slick-next:before {
+      color: #000000;
+    }
+    
+  }
 }
 
 .one-item {

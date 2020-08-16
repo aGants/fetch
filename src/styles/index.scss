@@ -11,9 +11,30 @@ $promo-border-left: 16px;
 
 body { margin-top: -48px; }
 
-.slick-slider {
-  margin: 0 auto;
-  @include w-from($screen-lg) { max-width: 1440px; }
+.slick {
+  &-slider {
+    margin: 0 auto;
+    @include w-from($screen-lg) { max-width: 1440px; }
+  }
+  &-arrow {
+    &.slick-prev {
+      left: 8px;
+      @include w-from($screen-lg) { left: 32px; }
+    }
+    &.slick-next {
+      right: 8px;
+      @include w-from($screen-lg) { right: 32px; }
+    }
+    &.slick-prev:before,
+    &.slick-next:before {
+      font-size: 24px;
+      color: #f6f6f6;
+    }
+    &:hover.slick-prev:before,
+    &:hover.slick-next:before {
+      color: #ffffff;
+    }
+  }
 }
 
 header { 

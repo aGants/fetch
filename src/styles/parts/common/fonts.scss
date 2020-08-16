@@ -8,28 +8,49 @@
 }
 
 @font-face {
-  font-family: 'PT Sans';
-  font-weight: 400;
-  font-style: italic;
-  src: local('PT Sans Italic'), local('PTSans-Italic'),
-  url("../assets/fonts/ptsansitalic.woff2") format("woff2"),
-  url("../assets/fonts/ptsansitalic.woff") format("woff");
-}
-
-@font-face {
-  font-family: 'PT Sans';
-  font-weight: 700;
+  font-family: 'Icons';
+  src: url('../assets/fonts/fontello.woff2?81856965') format('woff2'),
+    url('../assets/fonts/fontello.woff?81856965') format('woff');
+  font-weight: normal;
   font-style: normal;
-  src: local('PT Sans Bold'), local('PTSans-Bold')
-  url("../assets/fonts/ptsansbold.woff2") format("woff2"),
-  url("../assets/fonts/ptsansbold.woff") format("woff");
 }
 
-@font-face {
-  font-family: 'PT Sans';
-  font-weight: 700;
-  font-style: italic;
-  src: local('PT Sans Bold Italic'), local('PTSans-BoldItalic'),
-  url("../assets/fonts/ptsansbolditalic.woff2") format("woff2"),
-  url("../assets/fonts/ptsansbolditalic.woff") format("woff");
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "Icons";
+  font-style: normal;
+  font-weight: normal;
+  display: inline-block;
 }
+
+%icon-cart {
+  &:before {
+    font-family: "Icons";
+    content: '\e802';
+  }
+}
+
+%icon-cross {
+  &:before {
+    font-family: "Icons";
+    content: '\e803'
+  }
+}
+
+%icon-arr-left {
+  &:before {
+    font-family: "Icons";
+    content: '\e801';
+  }
+}
+%icon-arr-right {
+  &:before {
+    font-family: "Icons";
+    content: '\e800';
+  }
+}
+
+
+
+
+
