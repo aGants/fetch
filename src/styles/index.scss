@@ -12,6 +12,7 @@ $promo-border-left: 16px;
 body { margin-top: -48px; }
 
 .slick-slider {
+  margin: 0 auto;
   @include w-from($screen-lg) { max-width: 1440px; }
 }
 

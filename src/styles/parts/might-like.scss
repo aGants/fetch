@@ -1,21 +1,39 @@
 @import 'one-item.scss';
 
 .might-like {
-  width: 100vw;
-  margin: 0 auto;
+  overflow: hidden;
+  margin: 0 $mob-side-border;
   @include w-from ($screen-lg) {
     width: $container;
+    margin-left: $lg-side-border;
   }
+
   &__title {
-
-  }
-
-  &__slider {
-    &__slide {
-      &__img {
-
-      }
+    width: 288px;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 24px;
+    @include w-from ($screen-lg) {
+    width: auto;
     }
   }
-  // background: #000;
+
+  &-container {
+    margin: 0 24px;
+    @include w-from ($screen-lg) {
+      margin: 0 40px;
+    }
+  }
+  & .slick-arrow {
+    width: 28.24px;
+    height: 24px;
+    fill: #000000;
+  }
+
+}
+
+.one-item {
+  &-slide {
+    width: 240px !important;
+  }
 }

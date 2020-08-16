@@ -1,7 +1,7 @@
-- var classname = might-like-slide
+- var classname = 'one-item'
 
 mixin item(src)
-  div(class=classname)
+  div(class=classname+'-slide')
     img(class=classname+'__img' src='assets/catalog/'+src)
     p(class=classname+'__link')
       a(class=classname+'__link' href="item.html")= 'Maison Margiela Fusion Low Sneakers'
@@ -10,12 +10,13 @@ mixin item(src)
 
 .might-like
   h1.might-like__title Вам может быть интересно
-  .might-like-slider
-    +item('img-3.jpg')
-    +item('img-9.jpg')
-    +item('img-16.jpg')
-    +item('img-1.jpg')
-    +item('img-2.jpg')
-    +item('img-4.jpg')
-    +item('img-5.jpg')
-    +item('img-6.jpg')
+  .might-like-container
+    .might-like-slider
+      +item('img-3.jpg')
+      +item('img-9.jpg')
+      +item('img-16.jpg')
+      +item('img-1.jpg')
+      +item('img-2.jpg')
+      +item('img-4.jpg')
+      +item('img-5.jpg')
+      +item('img-6.jpg')

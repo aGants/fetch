@@ -1,8 +1,8 @@
-@import 'parts/common/main.scss', 'parts/common/footer.scss', 
-'parts//might-like.scss','parts/item-interactive.scss',
-'parts/lib/slick-carousel.scss', 'parts/lib/magnific-popup.scss';
-
 $lg-side-border: 24px;
+
+@import 'parts/common/main.scss', 'parts/common/footer.scss', 
+'parts/might-like.scss','parts/item-interactive.scss',
+'parts/lib/slick-carousel.scss', 'parts/lib/magnific-popup.scss';
 
 header { @extend %nav-white; }
 

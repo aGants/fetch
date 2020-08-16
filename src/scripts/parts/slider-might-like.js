@@ -3,9 +3,18 @@ export default function initSliderMightLike() {
   require('slick-carousel');
 
   $('.might-like-slider').slick({
+    infinite: true,
     slidesToShow: 4,
     slidesToScroll: 4,
     arrows: true,
-    useTransform: false
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ],
   });
 }
