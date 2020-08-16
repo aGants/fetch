@@ -241,9 +241,6 @@ header {
       user-select: none;
       cursor: pointer;
       fill:$input-border;
-      @include w-from ($screen-lg) {
-        left: 315px;
-      }
     }
   }
 }
