@@ -21,6 +21,13 @@ mixin picture(name, img, mimg)
     source(media="(min-width: 1200px)" srcset='assets/images/'+img type="image/jpeg")
     img(class=classname, src='assets/images/'+img, alt=name)
 
+mixin image(img, classname)
+  img(src='assets/images/'+img class=blockclass+'-'+classname+'__img')
+
+mixin imagetext(text) 
+  p(class=classtext) 
+      span(class=classtext+"__span")=text
+
 mixin item(src)
   div(class=classname)
     img(class=classname+'__img' src='assets/catalog/'+src)

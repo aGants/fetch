@@ -11,10 +11,12 @@
     display: block;
     width: 100%;
   }
-
+  
   &__link {
     font-size: $small-text;
     font-weight: bold;
+    margin-top: 12px;
+    @include w-to($screen-lg) { margin-top: 8px;}
 
     &,
     &:visited {

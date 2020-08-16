@@ -1,0 +1,19 @@
+- var blockclass = 'slider-item';
+
+mixin slider(classname)
+  - var divclass = blockclass+'-'+classname
+  div(class=divclass)
+    div(class=divclass+'__slide')
+      +image('item-1.png', classname)
+    div(class=divclass+'__slide')
+      +image('item-2.png', classname)
+    div(class=divclass+'__slide')
+      +image('item-3.png', classname)
+    div(class=divclass+'__slide')
+      +image('item-4.png', classname)
+
+
+.slider-item
+  +slider('main')
+  +slider('nav')
+        

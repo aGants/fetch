@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 html(lang="ru")
   head
-    include common/head
+    include parts/common/head
     link(rel="stylesheet" href="styles/item.css")
   body
     header
-      include common/header
+      include parts/common/header
     main.main.container
-      include item/slider
+      include parts/item/slider
       .item
-        include item/main
-      include common/might-like
-    include common/footer 
+        include parts/item/main
+      include parts/might-like
+    include parts/common/footer 
     .item-size.mfp-hide#size
-      include item/size
+      include parts/item/size
     script(src="scripts/item.js")

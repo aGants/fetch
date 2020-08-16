@@ -55,9 +55,7 @@
 }
 
 .one-item {
-  &-slide {
     @include w-from($screen-lg) {
       width: 240px !important;
     }
-  }
 }

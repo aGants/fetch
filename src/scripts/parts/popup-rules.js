@@ -1,12 +1,8 @@
-export default function initPopUpp() {
+export default function initRules() {
   const $ = require('jquery');
   require('magnific-popup');
 
   $('.popup').magnificPopup({
-    type: 'inline'
-  });
-
-  $('.item-custom__table').magnificPopup({
     type: 'inline'
   });
 }

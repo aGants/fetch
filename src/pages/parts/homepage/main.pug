@@ -1,8 +1,8 @@
-mixin picture(name, img, mimg, classname)
-  picture
-    source(media="(max-width: 767px)" srcset='assets/images/'+mimg type="image/jpeg")
-    source(media="(min-width: 1200px)" srcset='assets/images/'+img type="image/jpeg")
-    img(class=classname, src='assets/images/'+img, alt=name)
+//- mixin picture(name, img, mimg, classname)
+//-   picture
+//-     source(media="(max-width: 767px)" srcset='assets/images/'+mimg type="image/jpeg")
+//-     source(media="(min-width: 1200px)" srcset='assets/images/'+img type="image/jpeg")
+//-     img(class=classname, src='assets/images/'+img, alt=name)
 
 .container
   .home
@@ -11,14 +11,15 @@ mixin picture(name, img, mimg, classname)
         p.menu-text__p <span>Фетч</span> – мультибрендовый магазин модной одежды. 
         p.menu-text__p Следим за трендами и часто обновляем ассортимент. 
         p.menu-text__p Доставляем по Москве за день, по России – за неделю.
-      include ../common/catalog-nav
+      include ../catalog-nav
 
     .home-promo    
       .home-promo-1
         .text-container
           a(href="item.html").home-promo__link.lookbook Лукбук, лeто 2019
           span.home-promo__text.lookbook Стильные образы для тёплых деньков
-        +picture('Lookbook, summer 2019', 'lookbook-summer.png', 'm-lookbook-summer.png', 'home-promo__img lookbook')
+        - var classname='home-promo__img lookbook'
+        +picture('Lookbook, summer 2019', 'lookbook-summer.png', 'm-lookbook-summer.png')
 
       .home-promo-2 
         .text-container
@@ -35,4 +36,5 @@ mixin picture(name, img, mimg, classname)
         .text-container
           a(href="item.html").home-promo__link.maison Предзаказ: Maison Margiela Fusion
           span.home-promo__text.maison от 92 000 ₽
-        +picture('Maison Margiela Fusion', 'preoder.jpg', 'm-preoder.jpg', 'home-promo__img maison')
+          - var classname='home-promo__img maison'
+        +picture('Maison Margiela Fusion', 'preoder.jpg', 'm-preoder.jpg')

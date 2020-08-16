@@ -108,13 +108,13 @@ header { @extend %nav-white; }
   } 
 
   &-about {
-    margin: 0 $mob-side-border;
-    margin-bottom: 56px;
+    margin: 0 $mob-side-border 56px;
     display: grid;
     gap: 24px;
     @include w-from ($screen-lg) { 
       gap: 32px;
       max-width: 380px;
+      margin-bottom: 64px;
     }
 
     &__parameter { 
