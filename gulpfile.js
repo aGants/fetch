@@ -74,7 +74,7 @@ function clearBuild() {
 
 function watchFiles() {
   watch(['src/pages/*.pug', 'src/pages/*/*.pug'], buildPages);
-  watch(['src/styles/*.scss', 'src/styles/*/*.scss'], buildStyles);
+  watch(['src/styles/*.scss', 'src/styles/*/*.scss', 'src/styles/*/*/*.scss'], buildStyles);
   watch('src/scripts/**/*.js', buildScripts);
   watch('src/assets/**/*.*', buildAssets);
 }

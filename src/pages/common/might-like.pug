@@ -1,4 +1,4 @@
-- var classname = might-like
+- var classname = might-like-slide
 
 mixin item(src)
   div(class=classname)
@@ -9,11 +9,13 @@ mixin item(src)
     p(class=classname+'__price')= '92 000 ₽'
 
 .might-like
-  +item('img-3.jpg')
-  +item('img-9.jpg')
-  +item('img-16.jpg')
-  +item('img-1.jpg')
-  +item('img-2.jpg')
-  +item('img-4.jpg')
-  +item('img-5.jpg')
-  +item('img-6.jpg')
+  h1.might-like__title Вам может быть интересно
+  .might-like-slider
+    +item('img-3.jpg')
+    +item('img-9.jpg')
+    +item('img-16.jpg')
+    +item('img-1.jpg')
+    +item('img-2.jpg')
+    +item('img-4.jpg')
+    +item('img-5.jpg')
+    +item('img-6.jpg')

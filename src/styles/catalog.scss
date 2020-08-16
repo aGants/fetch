@@ -1,5 +1,5 @@
 @import 'parts/common/main.scss', 'parts/common/footer.scss', 
-'parts/common/catalog-nav.scss';
+'parts/catalog-nav.scss', 'parts/one-item.scss';
 
 $page-size: 15px;
 $page-chosen: 24px;
@@ -34,40 +34,6 @@ header { @extend %nav-dark; }
     flex-wrap: wrap;
     flex-flow: row wrap;
     justify-content: space-between;
-
-    &-item {
-      width: 240px;
-      margin-right: 32px;
-      @include w-to($screen-lg) {
-        width: 42vw;
-        margin-right: 16px;
-      }
-      &__img {
-        display: block;
-        width: 100%;
-      }
-
-      &__link {
-        font-size: $small-text;
-        font-weight: bold;
-        &, &:visited { color: $text-color; }
-        &:hover, &:active:visited { color: $white-link; }
-        @include w-from($screen-lg) { font-size: $text-size; }
-      }
-
-      &__type { 
-        font-size: $small-text;
-        margin: 4px 0 8px;
-        @include w-from($screen-lg) { margin-bottom: 12px; }
-      }
-
-      &__price {
-        margin-bottom: 32px;
-        font-size: $text-size;
-        font-weight: bold;
-        @include w-from($screen-lg) { margin-bottom: 48px; }
-      }
-    }
   }
   
   &-nav {

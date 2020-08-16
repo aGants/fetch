@@ -1,12 +1,10 @@
 @import 'parts/common/main.scss', 'parts/common/footer.scss', 
-'parts/common/catalog-item.scss', 'parts/lib/slick-carousel.scss', 
-'parts/lib/magnific-popup.scss', 'parts/item-parts.scss';
+'parts//might-like.scss','parts/item-interactive.scss',
+'parts/lib/slick-carousel.scss', 'parts/lib/magnific-popup.scss';
 
 $lg-side-border: 24px;
 
-header { 
-  @extend %nav-white;
-}
+header { @extend %nav-white; }
 
 .main {
     @include w-from ($screen-lg) {
@@ -16,6 +14,11 @@ header {
       margin-top: 41px;
       margin: 41px auto 64px;
     }
+}
+
+.might-like { 
+  grid-column: 1/2;;
+  grid-row: 2;
 }
 
 .item {
