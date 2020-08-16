@@ -1,17 +1,8 @@
-- var classname = 'one-item'
-
-mixin item(src)
-  div(class=classname+'-slide')
-    img(class=classname+'__img' src='assets/catalog/'+src)
-    p(class=classname+'__link')
-      a(class=classname+'__link' href="item.html")= 'Maison Margiela Fusion Low Sneakers'
-    p(class=classname+'__type')= 'Кроссовки'
-    p(class=classname+'__price')= '92 000 ₽'
-
 .might-like
   h1.might-like__title Вам может быть интересно
   .might-like-container
     .might-like-slider
+      - var classname = 'one-item'
       +item('img-3.jpg')
       +item('img-9.jpg')
       +item('img-16.jpg')

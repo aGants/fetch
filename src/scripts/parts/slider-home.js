@@ -16,7 +16,7 @@ function sliderHome() {
 
 function changeHeader() {
   const $ = require('jquery');
-  $('.slider').on('beforeChange', function (currentSlide, slick, nextSlide) {
+  $('.slider-home').on('beforeChange', function (currentSlide, slick, nextSlide) {
     switch (nextSlide) {
       case 2:
         $('header').removeAttr('class');

@@ -1,10 +1,13 @@
+mixin image(img, text) 
+  .slider-home__slide
+    img(src="assets/images/"+img)
+    p(class="slider-home-text") 
+      span(class="slider-home-text__span")=text
+
 .slider-home
-  .slider-home__slide
-    img(src="assets/images/header-1.jpg") 
+    +image('header-1.jpg','Reebok Aztrek Double')
     //- 2
-  .slider-home__slide
-    img(src="assets/images/header-2.jpg")
+    +image('header-2.jpg','Nike ACG: навстречу новым открытиям')
     //- 0
-  .slider-home__slide
-    img(src="assets/images/header-3.jpg")
+    +image('header-3.jpg','Распродажа до −15%')
     //- 1

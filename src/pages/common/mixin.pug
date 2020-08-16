@@ -1,0 +1,41 @@
+mixin link(name)
+  a(class=mainclass+'__'+linkclass href=hrefname)=name
+  
+mixin modlink(name)
+  a(class=mainclass+'__'+mod+linkclass href=hrefname)=name
+
+mixin href(href, name)
+  a(class=mainclass+'__'+linkclass href=href)=name
+
+mixin radio(className, nameGroup, text, number)
+  div(class=className)
+    input(class=className+'__input' id='radio-'+nameGroup+number type='radio' name=nameGroup)
+    label(for='radio-'+nameGroup+number class=className+'__label')= text
+
+mixin li(name)
+  li(class=ulclass+'__point')= name
+
+mixin picture(name, img, mimg)
+  picture
+    source(media="(max-width: 767px)" srcset='assets/images/'+mimg type="image/jpeg")
+    source(media="(min-width: 1200px)" srcset='assets/images/'+img type="image/jpeg")
+    img(class=classname, src='assets/images/'+img, alt=name)
+
+mixin item(src)
+  div(class=classname)
+    img(class=classname+'__img' src='assets/catalog/'+src)
+    p(class=classname+'__link')
+      a(class=classname+'__link' href="item.html")= 'Maison Margiela Fusion Low Sneakers'
+    p(class=classname+'__type')= 'Кроссовки'
+    p(class=classname+'__price')= '92 000 ₽'
+
+mixin string(size, a, b, c, d, e, f, g)
+  tr(class=classtable+' tr')
+    th(class=classtable+'__th')=size
+    th(class=classtable+'__th')=a
+    th(class=classtable+'__th')=b
+    th(class=classtable+'__th')=c
+    th(class=classtable+'__th')=d
+    th(class=classtable+'__th')=e
+    th(class=classtable+'__th')=f
+    th(class=classtable+'__th')=g

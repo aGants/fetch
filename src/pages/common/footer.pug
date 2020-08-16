@@ -1,10 +1,9 @@
-mixin link(href, name)
-  a(class="menu-block__link" href=href)=name
-
 footer.footer
   .container
     .menu
       .menu-block
+        - var mainclass = '.menu-block'
+        - var linkclass = 'link'
         a(href="index.html").menu-block__mainlink.fetch Фетч 
         +link('', 'Магазин')
         +link('', 'Блок')

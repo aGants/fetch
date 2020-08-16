@@ -1,11 +1,10 @@
-mixin link(name)
-  a(class='menu-block__link' href='catalog.html')=name
-
-mixin main-link(name)
-  a(class='menu-block__mainlink' href='catalog.html')=name  
+- var hrefname = 'catalog.html'
+- var mainclass = 'menu-block'
+- var linkclass = 'link'
+- var mod = 'main'
 
 .menu-block
-  +main-link('Для мужчин')
+  +modlink('Для мужчин')
   +link('Верхняя одежда')
   +link('Рубашки и поло')
   +link('Трикотаж')
@@ -13,7 +12,7 @@ mixin main-link(name)
   +link('Бельё и носки')
 
 .menu-block
-  +main-link('Для женщин')
+  +modlink('Для женщин')
   +link('Верхняя одежда')
   +link('Рубашки и поло')
   +link('Трикотаж')
@@ -21,18 +20,18 @@ mixin main-link(name)
   +link('Бельё и носки')
 
 .menu-block
-  +main-link('Обувь')
+  +modlink('Обувь')
   +link('Кроссовки и кеды')
   +link('Ботинки')
 
 .menu-block
-  +main-link( 'Аксессуары')
+  +modlink( 'Аксессуары')
   +link('Сумки и рюкзаки')
   +link('Часы')
   +link('Бижутерия')
   +link('Средства для ухода')
 
 .menu-block
-  +main-link('Скидки')
+  +modlink('Скидки')
   +link('Летняя распродажа')
   +link('Коллекция 2018')

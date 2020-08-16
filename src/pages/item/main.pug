@@ -1,15 +1,3 @@
-- var classRadioColor = 'radio-color item-custom-block-radio';
-- var classRadioSize = 'radio-size item-custom-block-radio';
-
-mixin radio(className, nameGroup, text, number)
-  div(class=className)
-    input(class=className+'__input' id='radio-'+nameGroup+number type='radio' name=nameGroup)
-    label(for='radio-'+nameGroup+number class=className+'__label')= text
-
-mixin li(name)
-  li(class='item-about__point')= name
-
-
 .item-title
   h1.item-title__name Maison Margiela Fusion Low Sneakers
   p.item-title__type Кроссовки
@@ -18,11 +6,13 @@ mixin li(name)
   .item-custom-block
     span.item-custom-block__text Цвет
     .item-custom-block-radio
+      - var classRadioColor = 'radio-color item-custom-block-radio';
       +radio(classRadioColor, 'color', 'Белый с розовым', '1')
       +radio(classRadioColor, 'color', 'Белый с зелёным', '2')
   .item-custom-block
     span.item-custom-block__text Размер US
     .item-custom-block-radio
+      - var classRadioSize = 'radio-size item-custom-block-radio';
       +radio(classRadioSize, 'size', '6', '1')
       +radio(classRadioSize, 'size', '6,5', '2')
       +radio(classRadioSize, 'size', '7', '3')
@@ -47,6 +37,7 @@ mixin li(name)
   .item-about-details
     span.item-about__parameter Детали
     ul.item-about__content 
+      - var ulclass = 'item-about'
       +li('Два вида кожи')
       +li('Детали из текстиля')
       +li('Неординарная шнуровка')

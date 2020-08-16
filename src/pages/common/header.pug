@@ -1,17 +1,16 @@
-mixin nav-link(href, name)
-  a(class="nav-links__link" href=href)=name
-
+include mixin
 .container
   .nav
     a(href="index.html").nav__main Фетч
     .nav-links
-      a  
-        +nav-link('catalog.html','Одежда')
-        +nav-link('catalog.html','Обувь')
-        +nav-link('catalog.html','Аксессуары')
-        +nav-link('','Блог')
-        +nav-link('catalog.html','Магазин')
-        +nav-link('','Доставка и оплата')
+        - var mainclass = 'nav-links'
+        - var linkclass = 'link'
+        +href('catalog.html','Одежда')
+        +href('catalog.html','Обувь')
+        +href('catalog.html','Аксессуары')
+        +href('','Блог')
+        +href('catalog.html','Магазин')
+        +href('','Доставка и оплата')
 
     .nav-checkout
       a(href="").nav-checkout__link

@@ -1,16 +1,3 @@
-- var classname = 'one-item'
-
-mixin item(src)
-  div(class=classname)
-    img(class=classname+'__img' src=src)
-    p(class=classname+'__link')
-      a(class=classname+'__link' href="item.html")= 'Maison Margiela Fusion Low Sneakers'
-    p(class=classname+'__type')= 'Кроссовки'
-    p(class=classname+'__price')= '92 000 ₽'
-
-mixin page(name)
-  a(class='main-nav-pages__p' href='catalog.html')=name
-
 <!DOCTYPE html>
 html(lang="en")
   head
@@ -23,36 +10,40 @@ html(lang="en")
       .container
         h1.main__title Обувь
         .main-catalog
-          +item('assets/catalog/img.jpg')
-          +item('assets/catalog/img-1.jpg')
-          +item('assets/catalog/img-2.jpg')
-          +item('assets/catalog/img-3.jpg')
-          +item('assets/catalog/img-4.jpg')
-          +item('assets/catalog/img-5.jpg')
-          +item('assets/catalog/img-6.jpg')
-          +item('assets/catalog/img-7.jpg')
-          +item('assets/catalog/img-8.jpg')
-          +item('assets/catalog/img-9.jpg')
-          +item('assets/catalog/img-10.jpg')
-          +item('assets/catalog/img-11.jpg')
-          +item('assets/catalog/img-12.jpg')
-          +item('assets/catalog/img-13.jpg')
-          +item('assets/catalog/img-14.jpg')
-          +item('assets/catalog/img-15.jpg')
+          - var classname = 'one-item'
+          - var hrefname = 'catalog.html'
+          +item('img.jpg')
+          +item('img-1.jpg')
+          +item('img-2.jpg')
+          +item('img-3.jpg')
+          +item('img-4.jpg')
+          +item('img-5.jpg')
+          +item('img-6.jpg')
+          +item('img-7.jpg')
+          +item('img-8.jpg')
+          +item('img-9.jpg')
+          +item('img-10.jpg')
+          +item('img-11.jpg')
+          +item('img-12.jpg')
+          +item('img-13.jpg')
+          +item('img-14.jpg')
+          +item('img-15.jpg')
         .main-nav
           span.main-nav__text Страницы
             .main-nav-pages
-              +page(1)
-              +page(2)
-              +page(3)
-              +page(4)
-              +page(5)
-              +page(6)
-              +page(7)
-              +page(8)
-              +page(9)
-              +page(10)
-              +page(11)
-              +page(12)
+              - var mainclass = 'main-nav-pages'
+              - var linkclass = 'p'
+              +link(1)
+              +link(2)
+              +link(3)
+              +link(4)
+              +link(5)
+              +link(6)
+              +link(7)
+              +link(8)
+              +link(9)
+              +link(10)
+              +link(11)
+              +link(12)
                 
     include common/footer
