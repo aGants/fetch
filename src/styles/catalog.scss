@@ -35,6 +35,8 @@ header { @extend %nav-dark; }
     justify-content: space-between;
 
     &-item {
+      width: 240px;
+      margin-right: 32px;
       @include w-to($screen-lg) {
         width: 42vw;
         margin-right: 16px;

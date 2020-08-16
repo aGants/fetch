@@ -15,7 +15,7 @@ body {
 .container {
   margin: 0 auto;
   @include w-from($screen-lg) {
-    width: 1095px;
+    width: 1136px;
     margin: 0 auto;
   }
 }
