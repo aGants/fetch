@@ -1,0 +1,21 @@
+mixin string(size, a, b, c, d, e, f, g)
+  tr.item-size-table.tr
+    th.item-size-table__th=size
+    th.item-size-table__th=a
+    th.item-size-table__th=b
+    th.item-size-table__th=c
+    th.item-size-table__th=d
+    th.item-size-table__th=e
+    th.item-size-table__th=f
+    th.item-size-table__th=g
+
+<svg class='mfp-close item-size__close' width="17" height="17" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M33.9411 0L36.7696 2.82843L2.82843 36.7696L0 33.9411L33.9411 0Z" fill="black"/>
+<path d="M1.23635e-07 2.82843L2.82843 0L36.7696 33.9411L33.9411 36.7696L1.23635e-07 2.82843Z" fill="black"/>
+</svg>
+h1.item-size__title Таблица размеров
+.item-size-container
+  table.item-size-table
+    +string('US', '4', '4,5', '5', '5,5', '6', '7', '7,5')
+    +string('UK', '3,5', '4', '4,5', '6', '5,5', '6', '6,5', '7')
+    +string('EU', '36', '37', '38', '39', '40', '41', '42', '43')
