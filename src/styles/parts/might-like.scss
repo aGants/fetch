@@ -25,9 +25,12 @@
   }
 
   .slick-arrow {
+    top: 160px;
     &.slick-prev {
       left: -36px;
-      @include w-from($screen-lg) { left: -48px;}
+      margin-left: 4px;
+      @include w-from($screen-lg) { left: -48px;
+      margin: auto;}
     }
     &.slick-next {
       right: -36px;
@@ -49,6 +52,8 @@
 
 .one-item {
   &-slide {
-    width: 240px !important;
+    @include w-from($screen-lg) {
+      width: 240px !important;
+    }
   }
 }
