@@ -1,0 +1,19 @@
+- var classname = might-like
+
+mixin item(src)
+  div(class=classname)
+    img(class=classname+'__img' src='assets/catalog/'+src)
+    p(class=classname+'__link')
+      a(class=classname+'__link' href="item.html")= 'Maison Margiela Fusion Low Sneakers'
+    p(class=classname+'__type')= 'Кроссовки'
+    p(class=classname+'__price')= '92 000 ₽'
+
+.might-like
+  +item('img-3.jpg')
+  +item('img-9.jpg')
+  +item('img-16.jpg')
+  +item('img-1.jpg')
+  +item('img-2.jpg')
+  +item('img-4.jpg')
+  +item('img-5.jpg')
+  +item('img-6.jpg')

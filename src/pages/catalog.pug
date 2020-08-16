@@ -1,11 +1,13 @@
+- var classname = 'main-catalog-item'
+
 mixin item(src)
-  .main-catalog-item
-    img(class='main-catalog-item__img' src=src)
-    
-    p.main-catalog__link
-      a(class='main-catalog-item__link' href="item.html")= 'Maison Margiela Fusion Low Sneakers'
-    p(class='main-catalog-item__type')= 'Кроссовки'
-    p(class='main-catalog-item__price')= '92 000 ₽'
+  div(class=classname)
+    img(class=classname+'__img' src=src)
+    p(class=classname+'__link')
+      a(class=classname+'__link' href="item.html")= 'Maison Margiela Fusion Low Sneakers'
+    p(class=classname+'__type')= 'Кроссовки'
+    p(class=classname+'__price')= '92 000 ₽'
+
 mixin page(name)
   a(class='main-nav-pages__p' href='catalog.html')=name
 
