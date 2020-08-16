@@ -1,7 +1,20 @@
+mixin image(img, classname)
+  img(src='assets/images/item-'+img class="slider-item-"+classname+'__img')
+
+mixin slider(classname)
+  - var divclass = 'slider-item-'+classname
+  div(class=divclass)
+    div(class=divclass+'__slide')
+      +image('1.png', classname)
+    div(class=divclass+'__slide')
+      +image('2.png', classname)
+    div(class=divclass+'__slide')
+      +image('3.png', classname)
+    div(class=divclass+'__slide')
+      +image('4.png', classname)
+
+
 .slider-item
-  .slider-item__slide
-    img(src="") 
-  .slider-item__slide
-    img(src="")
-  .slider-item__slide
-    img(src="")
+  +slider('main')
+  +slider('nav')
+        

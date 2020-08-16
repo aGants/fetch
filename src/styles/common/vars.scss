@@ -37,6 +37,14 @@ $input-border: #DDDDDD;
   }
 }
 
+%linear-gradient {
+  mask-image: linear-gradient(90deg,
+    transparent 0, rgba(0, 0, 0, .25) 0px,
+    #000 23px,
+    #000 calc(100% - 23px),
+    rgba(0, 0, 0, .25) calc(100% - 9px),
+    transparent);
+}
 
 .mod-only-lg {
   @include w-to($screen-lg) {display: none !important;}

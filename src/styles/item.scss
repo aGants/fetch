@@ -1,14 +1,51 @@
 @import 'common/main.scss', 'common/footer.scss', 
-'common/catalog-item.scss', 'lib/slick-carousel.scss', 'lib/magnific-popup.scss';
+'common/catalog-item.scss', 'lib/slick-carousel.scss', 
+'lib/magnific-popup.scss';
 
 $lg-side-border: 24px;
 
-.slider {
-  display: block;
-  background-color: #F2F2F2;
+.slider-item {
+    margin: 33px $mob-side-border 24px;
   @include w-from ($screen-lg) { 
     grid-column: 2; 
     grid-row: 1;
+    margin: 0 auto;
+  }
+  &-main {
+    margin-bottom: 8px;
+    @include w-from ($screen-lg) {
+      width: 656px;
+      margin-bottom: 24px;
+    }
+    &__img { 
+      width: 100%;
+    }
+  }
+  &-nav {
+    @extend %linear-gradient;
+    @include w-from ($screen-lg) {
+      width: 656px;
+      height: 140px;
+      mask-image: none;
+    }
+    & .slick-slide {
+      cursor: pointer;
+      @include w-from ($screen-lg) {
+        width: 140px;
+      }
+      &.slick-current {
+        opacity: 0.3;
+      }
+    }
+    &__img { 
+      width: 100%;
+    }
+    & .slick-track { 
+      gap: 8px; 
+    @include w-from ($screen-lg) {
+      gap: 16px;
+    }
+    }
   }
 }
 
@@ -33,7 +70,7 @@ header {
   overflow: hidden;
   @include w-from ($screen-lg) { 
     grid-column: 1;
-    grid-row: 1;
+    grid-row: 1/2;
   }
 
   &-title {
@@ -201,7 +238,6 @@ header {
       right: 0;
       top: 0;
       margin: 11px;
-      // width: 100%;
       user-select: none;
       cursor: pointer;
       fill:$input-border;
