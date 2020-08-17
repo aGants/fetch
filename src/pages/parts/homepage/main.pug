@@ -13,7 +13,7 @@
           a(href="item.html").home-promo__link.lookbook Лукбук, лeто 2019
           span.home-promo__text.lookbook Стильные образы для тёплых деньков
         - var classname='home-promo__img lookbook'
-        +picture('Lookbook, summer 2019', 'lookbook-summer.png', 'm-lookbook-summer.png')
+        +picture('Lookbook, summer 2019', 'lookbook-summer', 'jpg')
 
       .home-promo-2 
         .text-container
@@ -30,5 +30,5 @@
         .text-container
           a(href="item.html").home-promo__link.maison Предзаказ: Maison Margiela Fusion
           span.home-promo__text.maison от 92 000 ₽
-          - var classname='home-promo__img maison'
-        +picture('Maison Margiela Fusion', 'preoder.jpg', 'm-preoder.jpg')
+          - var classname='home-promo__img maison js-lazy'
+        +picture('Maison Margiela Fusion', 'preoder', 'jpg')
