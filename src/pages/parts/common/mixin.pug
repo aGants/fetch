@@ -12,6 +12,12 @@ mixin radio(className, nameGroup, text, number)
     input(class=className+'__input' id='radio-'+nameGroup+number type='radio' name=nameGroup)
     label(for='radio-'+nameGroup+number class=className+'__label')= text
 
+mixin input(id, text, placeholder, offtext)
+  div(class=classname)
+    label(for=id class=classname+'__label')=text
+    input(type="text" placeholder=placeholder id='id' class=classname+'__input')
+    span(class=classname+'__span')=offtext
+
 mixin li(name)
   li(class=ulclass+'__point')= name
 
@@ -31,10 +37,12 @@ mixin imagetext(text)
 mixin item(src)
   div(class=classname)
     img(class=classname+'__img' src='assets/catalog/'+src)
-    p(class=classname+'__link')
-      a(class=classname+'__link' href="item.html")= 'Maison Margiela Fusion Low Sneakers'
-    p(class=classname+'__type')= 'Кроссовки'
-    p(class=classname+'__price')= '92 000 ₽'
+    div(class=classname+'-block')
+      p(class=classname+'__link')
+        a(class=classname+'__link' href="item.html")= 'Maison Margiela Fusion Low Sneakers'
+      p(class=classname+'__type')= 'Кроссовки'
+      p(class=classname+'__price')= '92 000 ₽'
+    
 
 mixin string(size, a, b, c, d, e, f, g)
   tr(class=classtable+' tr')

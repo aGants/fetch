@@ -103,6 +103,7 @@ header { @extend %nav-white; }
     &__button {
       display: block;
       margin-top: 40px;
+      padding: 10px 26px;
       @extend %button-style;
     }
   } 
@@ -138,5 +139,4 @@ header { @extend %nav-white; }
     &-text { grid-column: 1/3; }
     &-details { grid-column: 1/3; }
   }
-
 }

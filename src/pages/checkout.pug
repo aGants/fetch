@@ -1,1 +1,44 @@
- 
+include parts/common/mixin
+
+<!DOCTYPE html>
+html(lang="ru")
+  head
+    include parts/common/head
+    link(rel="stylesheet" href="styles/checkout.css")
+  body
+    header.header.container
+      h1.header__title Фетч <b>&#9679</b> Оформление заказа
+    main.main.container
+      .main-cart
+        - var classname = 'one-item'
+        .main-cart-1
+          +item('img-17.jpg')
+        .main-cart-2
+          +item('img-10.jpg')
+        .main-cart-3
+          +item('img.jpg')
+      .main-price
+        hr.main-price__hr
+        p.main-price__price 276 000 ₽
+        span.main-price__text  Доставка бесплатно
+      .main-info 
+        .main-info-1
+          - var classname = 'main-info-block'
+          +input('mail', 'Эл. почта', 'petrov@yandex.ru', 'Пришлём чеки и трек-номер')
+          +input('phone', 'Телефон', '+7 999 275-12-37', 'Менеджер позвонит, чтобы подтвердить заказ')
+        .main-info-2
+          +input('city', 'Город', 'Москва', '')
+          div(class=classname)
+            label(for='address' class='main-info-block__label') Адрес
+            textarea(id='address' class=classname+'__input textarea' placeholder='Тимирязевская, 32, квартира 99, вход со двора' )
+        .main-order
+          p.main-order__text Бесплатная &nbsp; &nbsp; доставка курьером. Оплата картой онлайн.
+          button.main-order__button Оформить заказ, 276 000 ₽
+      .footer-info
+        span.footer-info__text © Фетч-команда, 2019
+        span.footer-info__text 8 800 912-11-42, звонок бесплатный
+        a.footer-info__link(href="mailto:shop@fetch.ru" itemprop='email') shop@fetch.ru
+        a.footer-info__link.popup(href='#rules') Правила обработки персональных данных
+      .footer-rules.mfp-hide#rules
+        include parts/common/rules.pug
+    script(src="scripts/index.js")
