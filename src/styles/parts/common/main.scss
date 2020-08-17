@@ -12,6 +12,10 @@ body {
   overflow-x: hidden;
 }
 
+a {
+  @extend %cursor;
+}
+
 .container {
   margin: 0 auto;
   @include w-from($screen-lg) {

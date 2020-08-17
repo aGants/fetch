@@ -67,7 +67,7 @@ header { @extend %nav-white; }
         margin-top: 8px;
         display: inline-block;
         margin-right: 10px;
-        color: $input-active;
+        @extend %cursor;
         @include w-from ($screen-lg) {
           margin-top: 0;
         }
@@ -79,17 +79,20 @@ header { @extend %nav-white; }
 
         &__input { display: none; }
         &__label {
+          @extend %cursor;
           display: inline-block;
           min-width: 32px;
           padding: 0px 8px;
           text-align: center;
-          font: $text-size;
+          font: $text;
           line-height: 34px;
           background: $input;
           border: 1px solid $input-border;
           border-radius: 8px;
           user-select: none;
-          cursor: pointer;
+          &:focus, &:active {
+            outline: none;
+          }
           &:hover { border-color: $input-active; }
         }
       }

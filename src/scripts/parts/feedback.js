@@ -2,9 +2,16 @@ export default function emailCheck() {
   const $ = require('jquery');
   let patternMail = /^[a-z0-9_-]+@[a-z0-9-]+\.[a-z]{2,6}$/i;
   let patternPhone = /^[+]7[\d\(\)\ -]{10,15}\d$/;
-
   let mail = $('#mail');
   let phone = $('#phone');
+
+  if (localStorage.getItem('person-mail')) {
+    mail.val(localStorage.getItem('person-mail'));
+  }
+
+   if (localStorage.getItem('person-phone')) {
+     phone.val(localStorage.getItem('person-phone'));
+   }
 
   $('.main-order__button').on('click', function () {      
     if (mail.val() == '') { 
@@ -16,6 +23,8 @@ export default function emailCheck() {
       return false; 
     } else deleteError(mail);
 
+    localSaveMail();
+
     if (phone.val() == '') { 
       showError(phone); 
       return false; 
@@ -24,6 +33,7 @@ export default function emailCheck() {
       showError(phone); 
       return false; 
     } else deleteError(phone);
+    localSavePhone(phone);
     document.location.href = "checkout-complete.html";
   });
 
@@ -36,4 +46,16 @@ export default function emailCheck() {
     input.css('border-color', '#DDDDDD');
   };
 
+  function localSaveMail() {
+    try {
+      localStorage.setItem('person-mail', document.querySelector("#mail").value);
+    } catch (e) {}
+  }
+
+  function localSavePhone() {
+    try {
+      localStorage.setItem('person-phone', document.querySelector("#phone").value);
+    } catch (e) {}
+    
+  }
 };

@@ -21,10 +21,6 @@ header {
   @include w-to($screen-lg) {
     margin: 0 $mob-side-border;
   }
-  
-  &__title {
-    font-size: $big-size;
-  }
   &-text {
     margin: 24px 0 56px;
     @include w-from($screen-lg) {

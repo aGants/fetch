@@ -76,7 +76,7 @@
         display: block;
         vertical-align: top;
         margin-right: 40px;
-        font-size: $text-size;
+        font-size: $text;
         @include w-from($screen-lg) {
           display: inline-block;
           width: 63px;

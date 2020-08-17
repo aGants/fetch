@@ -29,7 +29,7 @@
     }
 
     @include w-from($screen-lg) {
-      font-size: $text-size;
+      font-size: $text;
     }
   }
 
@@ -44,7 +44,7 @@
 
   &__price {
     margin-bottom: 32px;
-    font-size: $text-size;
+    font-size: $text;
     font-weight: bold;
 
     @include w-from($screen-lg) {

@@ -23,12 +23,18 @@ main { overflow: hidden; }
 .home {
   max-width: 100vw;
   padding-top: 24px;
-  
   .menu {
     flex-direction: row;
     flex-wrap: wrap;
     margin: 0 $mob-side-border;
     @include w-from($screen-lg) { margin: 0; }
+
+    &-block {
+      margin-bottom: 56px !important;
+      @include w-from($screen-lg) {
+        margin-bottom: 64px !important;
+      }
+    }
 
     &-text {
       display: block;
@@ -41,6 +47,7 @@ main { overflow: hidden; }
         & span { font-weight: bold; }
       }
     }
+  
 
     &-block {
       margin-right: 9px;
@@ -89,7 +96,7 @@ main { overflow: hidden; }
       display: block;
       max-width: 300px;
       margin-top: 8px;
-      font-size: $text-size;
+      font-size: $text;
       &.lookbook {
         @include w-from($screen-lg) {
         position: absolute;

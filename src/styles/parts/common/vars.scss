@@ -2,41 +2,42 @@ $screen-sm: 320px;
 $screen-lg: 1200px;
 
 $container: 1136px;
-
-$text-color: #000000;
-$maincolor: #ffffff;
-$bgcolor: #000000;
-$bgtextcolor: #F2F2F2;
-$footercolor: #ffffff;
-$footer-text-color: #666666;
-$lightest-color: #AFAFAF;
-
-
-$text-size: 16px;
-$middle-text: 18px;
-$small-text: 13px;
-$big-size: 32px;
-$nav-main-font-size: 24px;
-
-$header-slide-text: 64px;
-$header-slide-text-mob: 48px;
-
 $mob-side-border: 16px;
 $lg-side-border: 24px;
 %border-box { box-sizing: border-box; }
 
-$input: #FBFBFB;
-$input-active: #666666;
-$input-border: #DDDDDD;
+$text-color: #000000;
+$bgcolor:    #000000;
+$maincolor:  #ffffff;
+$bgtextcolor:#F2F2F2;
+$white-link:#4541FE;
+$input:       #FBFBFB;
+$input-active:#666666;
+$input-border:#DDDDDD;
+$dark-link:   #9f9f9f;
+$footer-text-color:#666666;
+$lightest-color:   #AFAFAF;
+
+%cursor {
+  cursor: url('../assets/icons/pointer.svg'), pointer;
+}
+
+$text: 16px;
+$middle-text: 18px;
+$small-text: 13px;
+$big-size: 32px;
+$nav-main-font-size: 24px;
+$header-slide-text: 64px;
+$header-slide-text-mob: 48px;
 
 %button-style {
-  font-size: $text-size;
+  font-size: $text;
   font-weight: bold;
   background: linear-gradient(180deg, #FFC908 0%, #FFBA08 100%);
   box-shadow: 0px 0px 15px rgba(255, 146, 17, 0.5);
   border-radius: 4px;
   border: none;
-  cursor: pointer;
+  @extend %cursor;
   &:hover, &:active, &:focus {
     outline: none;
     background: linear-gradient(180deg, #F5BF00 0%, #F0AD00 100%);
@@ -52,59 +53,46 @@ $input-border: #DDDDDD;
     transparent);
 }
 
-.mod-only-lg {
-  @include w-to($screen-lg) {display: none !important;}
-}
+.mod-only-lg { @include w-to($screen-lg) {display: none !important;} }
 
-//white-theme
-$white-bg: #ffffff;
-$white-text: #000000; 
-$white-link: #4541FE;
-//dark-theme
-$dark-bg: #000000;
-$dark-text: #ffffff;
-$dark-link: #9f9f9f;
 
 %dark-link {
-  & { color: $dark-text;
+    color: $maincolor;
     &:hover,
     &:active {
       color: $dark-link;
       border-color: $dark-link;
-    }}
+    }
 }
 
 %white-link {
-   & { 
-     color: $white-text;
+     color: $text-color;
      &:hover,
      &:active {
        color: $white-link;
        border-color: $white-link;
      }
-  }
 }
 
-//color-theme
 %nav-dark {
-  background-color: $dark-bg;
+  background-color: $text-color;
 
   .nav-links__link,
   .nav__main,
   .nav-checkout__link { @extend %dark-link; }
 
-  svg { fill: $dark-text; }
+  svg { fill: $maincolor; }
   a:hover svg { fill: $dark-link; }
 }
 
 %nav-white {
-  background-color: $white-bg;
+  background-color: $maincolor;
 
   .nav-links__link,
   .nav__main,
   .nav-checkout__link { @extend %white-link; }
 
-  svg { fill: $white-text; }
+  svg { fill: $text-color; }
 
   a:hover svg { fill: $white-link; }
 }

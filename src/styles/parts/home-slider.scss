@@ -81,11 +81,13 @@ header {
     &.slick-next:before {
       font-size: 24px;
       color: #f6f6f6;
+      @extend %cursor;
     }
 
     &:hover.slick-prev:before,
     &:hover.slick-next:before {
       color: #ffffff;
+      @extend %cursor;
     }
   }
 }

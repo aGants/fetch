@@ -24,7 +24,6 @@ header { @extend %nav-dark; }
 
   &__title {
     margin: 16px 0 24px;
-    font-size: $big-size;
     color: $maincolor;
     @include w-from($screen-lg) { margin: 24px 0 32px; }
   }
