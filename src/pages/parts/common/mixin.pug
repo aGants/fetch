@@ -15,7 +15,7 @@ mixin radio(className, nameGroup, text, number)
 mixin input(id, text, placeholder, offtext)
   div(class=classname)
     label(for=id class=classname+'__label')=text
-    input(type="text" placeholder=placeholder id='id' class=classname+'__input')
+    input(type="text" placeholder=placeholder id=id class=classname+'__input')
     span(class=classname+'__span')=offtext
 
 mixin li(name)
