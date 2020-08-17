@@ -1,6 +1,3 @@
-$header-slide-text: 64px;
-$header-slide-text-mob: 48px;
-
 .dark {
   @extend %nav-dark;
   @include w-from($screen-lg) {

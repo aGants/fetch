@@ -56,6 +56,9 @@ main { overflow: hidden; }
     &-block__link,
     &-block__mainlink {
       color: $white-link;
+      &:hover {
+        color: $text-color;
+      }
     }
   } 
   

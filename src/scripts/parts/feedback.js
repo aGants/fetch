@@ -24,20 +24,9 @@ export default function emailCheck() {
       showError(phone); 
       return false; 
     } else deleteError(phone);
-    document.location.href = "complete.html";
+    document.location.href = "checkout-complete.html";
   });
 
-  function Check(input) {
-    if (mail.val() == '') {
-      showError(mail);
-      return false;
-    }
-    if (mail.val().search(patternMail) != 0) {
-      showError(mail);
-      return false;
-    } else deleteError(mail);
-
-  }
 
   function showError(input) {
     input.css('border-color', 'red');

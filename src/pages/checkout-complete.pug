@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+html(lang="ru")
+  head
+    include parts/common/head
+    link(rel="stylesheet" href="styles/checkout-complete.css")
+  body
+    header
+      include parts/common/header
+    main.main.container
+      h1.main__title Заказ №213 оформлен
+        .main-text
+          span.main-text__span
+          p.main-text-p Скоро вам позвонит менеджер, чтобы подтвердить заказ.
+          p.main-text-p
+            | <a href='index.html' class='main-text-p__link'>Вернуться на главную</a>
+            | или
+            | <a href='catalog.html' class='main-text-p__link'>продолжить покупки в каталоге</a>
+        include parts/might-like
+    include parts/common/footer
+    script(src="scripts/checkout-complete.js")
