@@ -37,13 +37,13 @@ mixin imagetext(text)
       span(class=classtext+"__span")=text
 
 mixin item(src)
-  div(class=classname)
+  div(class=classname itemscope itemtype='http://schema.org/Product')
     img(class=classname+'__img' src='assets/catalog/'+src alt='Кроссовки')
     div(class=classname+'-block')
       p(class=classname+'__link')
-        a(class=classname+'__link' href="item.html")= 'Maison Margiela Fusion Low Sneakers'
-      p(class=classname+'__type')= 'Кроссовки'
-      p(class=classname+'__price')= '92 000 ₽'
+        a(class=classname+'__link' href="item.html" itemprop='name')= 'Maison Margiela Fusion Low Sneakers'
+      p(class=classname+'__type' itemprop='category')= 'Кроссовки'
+      p(class=classname+'__price' itemprop='price')= '92 000 ₽'
     
 
 mixin string(size, a, b, c, d, e, f, g)

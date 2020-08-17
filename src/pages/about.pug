@@ -8,8 +8,8 @@ html(lang="ru")
       include parts/common/header
     main.container
       h1.main__title О магазине Фетч
-      .main
-        .main-about
+      .main(itemscope itemtype='http://schema.org/Organization')
+        .main-about(itemprop='description')
           p.main-about__p В магазине Фетч представлено более 100 ведущих мировых 
             |производителей одежды и обуви. 
           p.main-about__p Разнообразие ассортимента обеспечивают товары культовых 
@@ -20,10 +20,10 @@ html(lang="ru")
           p.main-about__p Особый повод для гордости — обширная подборка редких и культовых кроссовок adidas 
             |Originals, Nike, New Balance, ASICS, Reebok и другие.
         .main-contact
-          span.main-contact__span.address Москва, Тимирязевская, 3
+          span(class='main-contact__span.address' itemprop='address') Москва, Тимирязевская, 3
           a(href="mailto:shop@fetch.ru" itemprop='email').main-contact__span.mail shop@fetch.ru
 
-          span.main-contact__span.phone 8 800 912-11-42
+          span(class='main-contact__span.phone' itemprop='telephone') 8 800 912-11-42
           span.main-contact__span.phone-text Звонок бесплатный
           .main-contact-block
             span.main-contact__span ИНН/КПП: 2901152637 / 290101001
@@ -31,6 +31,6 @@ html(lang="ru")
             span.main-contact__span БИК: 041117601, к/с 30101810100000000601 
           .main-contact-block
             span.main-contact__span Расчетный счет: 40702810004000103812 в отделении N8637 Сбербанка России, Архангельск 
-          span.main-contact__span Генеральный директор — Василенко Артём Викторович
+          span(itemprop='founder').main-contact__span Генеральный директор — Василенко Артём Викторович
     include parts/common/footer
     script(src="scripts/about.js")

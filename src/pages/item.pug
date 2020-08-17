@@ -6,10 +6,9 @@ html(lang="ru")
   body
     header
       include parts/common/header
-    main.main.container
+    main.main.container(itemscope itemtype='http://schema.org/Product')
       include parts/item/slider
-      .item
-        include parts/item/main
+      include parts/item/main
       include parts/might-like
     include parts/common/footer 
     .item-size.mfp-hide#size

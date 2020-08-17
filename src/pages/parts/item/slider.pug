@@ -2,7 +2,7 @@
 
 mixin slider(classname)
   - var divclass = blockclass+'-'+classname
-  div(class=divclass)
+  div(class=divclass itemprop="image")
     div(class=divclass+'__slide')
       +image('item-1.png', classname)
     div(class=divclass+'__slide')

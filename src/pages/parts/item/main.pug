@@ -1,49 +1,50 @@
-.item-title
-  h1.item-title__name Maison Margiela Fusion Low Sneakers
-  p.item-title__type Кроссовки
+.item
+  .item-title
+    h1.item-title__name(itemprop='name') Maison Margiela Fusion Low Sneakers
+    p.item-title__type(itemprop='category') Кроссовки
 
-.item-custom
-  .item-custom-block
-    span.item-custom-block__text Цвет
-    .item-custom-block-radio
-      - var classRadioColor = 'radio-color item-custom-block-radio';
-      +radio(classRadioColor, 'color', 'Белый с розовым', '1')
-      +radio(classRadioColor, 'color', 'Белый с зелёным', '2')
-  .item-custom-block
-    span.item-custom-block__text Размер US
-    .item-custom-block-radio
-      - var classRadioSize = 'radio-size item-custom-block-radio';
-      +radio(classRadioSize, 'size', '6', '1')
-      +radio(classRadioSize, 'size', '6,5', '2')
-      +radio(classRadioSize, 'size', '7', '3')
-      +radio(classRadioSize, 'size', '9', '4')
-  a(href='#size').item-custom__table Таблица размеров
-  button.item-custom__button Купить, 92 000 ₽
+  .item-custom
+    .item-custom-block
+      span.item-custom-block__text Цвет
+      .item-custom-block-radio(itemprop='color')
+        - var classRadioColor = 'radio-color item-custom-block-radio';
+        +radio(classRadioColor, 'color', 'Белый с розовым', '1')
+        +radio(classRadioColor, 'color', 'Белый с зелёным', '2')
+    .item-custom-block
+      span.item-custom-block__text Размер US
+      .item-custom-block-radio
+        - var classRadioSize = 'radio-size item-custom-block-radio';
+        +radio(classRadioSize, 'size', '6', '1')
+        +radio(classRadioSize, 'size', '6,5', '2')
+        +radio(classRadioSize, 'size', '7', '3')
+        +radio(classRadioSize, 'size', '9', '4')
+    a(href='#size').item-custom__table Таблица размеров
+    button.item-custom__button Купить, 92 000 ₽
 
-.item-about 
-  .item-about-material
-    span.item-about__parameter Материал
-    p.item-about__content Кожа, текстиль
-  .item-about-country
-    span.item-about__parameter Страна-производитель
-    p.item-about__content Италия
-  .item-about-text
-    span.item-about__parameter Описание
-    p.item-about__content 
-      p.paragraph Деконструктивный и авангардный дизайн с уникальными концепциями и нетрадиционным мастерством. 
-      p.paragraph В качестве материала используются два вида кожи. Верх дополнен деталями из сетчатого материала и текстиля. 
-      p.paragraph Грубые и многослойные кроссовки показывают отличие от традиционного аккуратного стиля создания обуви. Они оснащены раскрашенной вручную резиновой подошвой с брызгами и потеками. 
-      p.paragraph Оригинальная слегка асимметричная система шнуровки и фирменный стежок на заднике завершают уникальный внешний вид.
-  .item-about-details
-    span.item-about__parameter Детали
-    ul.item-about__content 
-      - var ulclass = 'item-about'
-      +li('Два вида кожи')
-      +li('Детали из текстиля')
-      +li('Неординарная шнуровка')
-      +li('Перфорация на мыске')
-      +li('Стежок на заднике')
-      +li('Фигурная резиновая подошва')
-      +li('Цепкая подметка')
-      +li('Окрашивание с брызгами и потеками')
-      +li('Пестрая расцветка')
+  .item-about
+    .item-about-material
+      span.item-about__parameter Материал
+      p.item-about__content Кожа, текстиль
+    .item-about-country
+      span.item-about__parameter Страна-производитель
+      p.item-about__content Италия
+    .item-about-text
+      span.item-about__parameter Описание
+      p.item-about__content(itemprop='description')
+        p.paragraph Деконструктивный и авангардный дизайн с уникальными концепциями и нетрадиционным мастерством. 
+        p.paragraph В качестве материала используются два вида кожи. Верх дополнен деталями из сетчатого материала и текстиля. 
+        p.paragraph Грубые и многослойные кроссовки показывают отличие от традиционного аккуратного стиля создания обуви. Они оснащены раскрашенной вручную резиновой подошвой с брызгами и потеками. 
+        p.paragraph Оригинальная слегка асимметричная система шнуровки и фирменный стежок на заднике завершают уникальный внешний вид.
+    .item-about-details
+      span.item-about__parameter Детали
+      ul.item-about__content 
+        - var ulclass = 'item-about'
+        +li('Два вида кожи')
+        +li('Детали из текстиля')
+        +li('Неординарная шнуровка')
+        +li('Перфорация на мыске')
+        +li('Стежок на заднике')
+        +li('Фигурная резиновая подошва')
+        +li('Цепкая подметка')
+        +li('Окрашивание с брызгами и потеками')
+        +li('Пестрая расцветка')

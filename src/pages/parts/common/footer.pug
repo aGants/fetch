@@ -1,6 +1,6 @@
 footer.footer
   .container
-    .menu
+    .menu(itemscope itemtype='http://schema.org/Organization')
       .menu-block
         - var mainclass = '.menu-block'
         - var linkclass = 'link'
@@ -10,11 +10,11 @@ footer.footer
         +link('', 'Доставка и оплата')
         .menu-block__contact
           a(href="mailto:shop@fetch.ru" itemprop='email').menu-block__link.contact-email shop@fetch.ru
-          span.menu-block__contact-item.contact-phone 8 800 912-11-42 
+          span(itemprop='telephone').menu-block__contact-item.contact-phone 8 800 912-11-42 
           span.menu-block__contact-item.contact-text Звонок бесплатный
       include ../catalog-nav
     .footer-info 
-      span.footer-info__text © Фетч-команда, 2019
+      span(itemprop='legalName').footer-info__text © Фетч-команда, 2019
       a.footer-info__link.popup(href='#rules') Правила обработки персональных данных
       a.footer-info__link(href='') Разработка и поддержка сайта
     .footer-rules.mfp-hide#rules
