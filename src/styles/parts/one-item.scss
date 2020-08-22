@@ -1,6 +1,16 @@
 .one-item {
   width: 240px;
   margin-right: 32px;
+  &,
+  &:visited {
+    color: $text-color;
+  }
+
+  &:hover,
+  &:active:visited {
+    color: $white-link;
+    outline: none;
+  }
 
   @include w-to($screen-lg) {
     width: 42vw;
@@ -16,21 +26,8 @@
     font-size: $small-text;
     font-weight: bold;
     margin-top: 12px;
-    @include w-to($screen-lg) { margin-top: 8px;}
-
-    &,
-    &:visited {
-      color: $text-color;
-    }
-
-    &:hover,
-    &:active:visited {
-      color: $white-link;
-    }
-
-    @include w-from($screen-lg) {
-      font-size: $text;
-    }
+    @include w-to($screen-lg) { margin-top: 8px; }
+    @include w-from($screen-lg) { font-size: $text; }
   }
 
   &__type {

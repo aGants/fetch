@@ -20,7 +20,7 @@
   
 }
 
-@mixin inc-click-area($size: 10px) {
+@mixin inc-click-area($size: 300px) {
   position: relative;
 
   &::after {
