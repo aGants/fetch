@@ -19,5 +19,5 @@
 * [Каталог](https://agants.github.io/fetch/catalog.html)
 * [Товар](https://agants.github.io/fetch/item.html)
 * [Оформить заказ](https://agants.github.io/fetch/checkout.html)
-* [Успешно оформление заказа](https://agants.github.io/fetch/checkout-complete.html)
+* [Успешное оформление заказа](https://agants.github.io/fetch/checkout-complete.html)
 * [О магазине](https://agants.github.io/fetch/about.html)
